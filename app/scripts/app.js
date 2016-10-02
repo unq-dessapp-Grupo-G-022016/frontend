@@ -33,6 +33,10 @@ angular
         templateUrl: 'views/tripSelection.html',
         controller: 'tripSelectionCtrl',
         controllerAs: 'tripSelection'
+      }).when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'loginCtrl',
+        controllerAs: 'login'
       })
       
       .otherwise({
