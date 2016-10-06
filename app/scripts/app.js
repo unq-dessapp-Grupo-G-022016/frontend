@@ -38,7 +38,11 @@ angular
         controller: 'loginCtrl',
         controllerAs: 'login'
       })
-      
+      .when('/event', {
+        templateUrl: 'views/event.html',
+        controller: 'eventCtrl',
+        controllerAs: 'event'
+      })
       .otherwise({
         redirectTo: '/'
       });
