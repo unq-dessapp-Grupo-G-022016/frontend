@@ -42,18 +42,23 @@ angular
       })
       .when('/tripSelection', {
         templateUrl: 'views/tripSelection.html',
-        controller: 'tripSelectionCtrl',
+        controller: 'TripSelectionCtrl',
         controllerAs: 'tripSelection'
       }).when('/login', {
         templateUrl: 'views/login.html',
-        controller: 'loginCtrl',
+        controller: 'LoginCtrl',
         controllerAs: 'login'
       })
       .when('/event', {
         templateUrl: 'views/event.html',
-        controller: 'eventCtrl',
+        controller: 'EventCtrl',
         controllerAs: 'event'
       })
+    .when('/user/:id', {
+        templateUrl: 'views/user.html',
+        controller: 'UserCtrl',
+        controllerAs: 'user'
+})
       .otherwise({
         redirectTo: '/'
       });
