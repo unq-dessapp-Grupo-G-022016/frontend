@@ -24,6 +24,7 @@ angular
   .constant('LOCALES', {
     'locales': {
       'ru_RU': 'Русский',
+      'es_ES': 'Español',
       'en_US': 'English'
     },
     'preferredLocale': 'en_US'

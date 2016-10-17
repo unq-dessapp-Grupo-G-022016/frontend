@@ -1,0 +1,15 @@
+{
+    "views.main.Splendid!": "Espléndido!",
+    "views.bundle.Bundle": "Paquete",
+    "views.bundle.StartTime": "Inicio",
+    "views.bundle.EndTime": "Fin",
+    "views.bundle.Address": "Dirección",
+    "views.bundle.Information": "Información",
+    "views.bundle.Price": "Precio",
+    "views.tripSelection.Cheap": "Gasolera",
+    "views.tripSelection.Friends": "Con amigos",
+    "views.tripSelection.SaturdayNightFever": "Volada de peluca",
+    "views.tripSelection.Couple": "Pareja",
+    "views.tripSelection.Surprice": "Sorpresa",
+    "directives.language-select.Language": "Idioma"
+}

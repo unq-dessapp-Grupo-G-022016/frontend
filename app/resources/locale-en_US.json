@@ -1,4 +1,15 @@
 {
     "views.main.Splendid!": "Splendid!",
+    "views.bundle.Bundle": "Bundle",
+    "views.bundle.StartTime": "Start time",
+    "views.bundle.EndTime": "End time",
+    "views.bundle.Address": "Address",
+    "views.bundle.Information": "Information",
+    "views.bundle.Price": "Price",
+    "views.tripSelection.Cheap": "Cheap",
+    "views.tripSelection.Friends": "Friends",
+    "views.tripSelection.SaturdayNightFever": "Saturday Night Fever",
+    "views.tripSelection.Couple": "Couple",
+    "views.tripSelection.Surprice": "Surprice",
     "directives.language-select.Language": "Language"
 }

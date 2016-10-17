@@ -8,13 +8,13 @@
 <div ng-repeat="e in bundle">
 
 	<div class="spanBottomLine">
-		<h2>Bundle {{$index}} </h2>
+		<h2>{{"views.bundle.Bundle" | translate}} {{$index}} </h2>
 		<div class="row">
 			<div class="col-md-3">
-				<h4>StarTime {{e.id + ":00"}}</h4>
+				<h4>{{"views.bundle.StartTime" | translate}} {{e.id + ":00"}}</h4>
 			</div>
 			<div class="col-md-3">
-				<h4>EndTime {{e.id + 3+ ":00"}}</h4>
+				<h4>{{"views.bundle.EndTime" | translate}} {{e.id + 3+ ":00"}}</h4>
 			</div>
 		</div>
 		<div class="panel panel-primary">
@@ -25,15 +25,15 @@
 				<div class="jumbotron">
 					<div class="row">
 						<div class="col-md-4">
-							<p> StartTime {{e.id+ ":00"}} </p>
-							<p> EndTime {{e.id+1+ ":00"}} </p>
+							<p> {{"views.bundle.StartTime" | translate}} {{e.id+ ":00"}} </p>
+							<p> {{"views.bundle.EndTime" | translate}} {{e.id+1+ ":00"}} </p>
 						</div>
 						<div class="col-md-6">
-							<p> Address {{e.title}} </p>
-							<p>Info {{e.body}} </p>
+							<p> {{"views.bundle.Address" | translate}} {{e.title}} </p>
+							<p>{{"views.bundle.Information" | translate}} {{e.body}} </p>
 						</div>
 						<div class="col-md-2">
-							<p> Price: {{e.userId}} </p>
+							<p> {{"views.bundle.Price" | translate}} : {{e.userId}} </p>
 						</div>
 					</div>
 				</div>
