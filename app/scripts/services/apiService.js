@@ -6,7 +6,7 @@ angular.module('frontendApp')
   .service('apiService', function() {
     return {
         url: function(){
-            return "www.asdasd.com"
+            return "www.asdasd.com/"
         },
       
       

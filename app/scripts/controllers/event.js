@@ -8,10 +8,18 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('EventCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('EventCtrl', function ($scope, eventService, $routeParams) {
+
+
+    eventService.get($routeParams.id).then(function (response) {
+      event = response.data;
+      $scope.eventName = event.eventName;
+    },
+      function (error) {
+
+        console.log(error);
+      });
+
   });
+
+

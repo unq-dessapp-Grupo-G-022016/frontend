@@ -1,0 +1,86 @@
+<p>This is the bundle view.</p>
+
+{{bundleee}}
+
+
+<h1>try</h1>
+
+<div ng-repeat="e in bundle">
+
+	<div class="spanBottomLine">
+		<h2>Bundle {{$index}} </h2>
+		<div class="row">
+			<div class="col-md-3">
+				<h4>StarTime {{e.id + ":00"}}</h4>
+			</div>
+			<div class="col-md-3">
+				<h4>EndTime {{e.id + 3+ ":00"}}</h4>
+			</div>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{eventName}}</h3>
+			</div>
+			<div class="panel-body">
+				<div class="jumbotron">
+					<div class="row">
+						<div class="col-md-4">
+							<p> StartTime {{e.id+ ":00"}} </p>
+							<p> EndTime {{e.id+1+ ":00"}} </p>
+						</div>
+						<div class="col-md-6">
+							<p> Address {{e.title}} </p>
+							<p>Info {{e.body}} </p>
+						</div>
+						<div class="col-md-2">
+							<p> Price: {{e.userId}} </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<br><br><br><br>
+<h1> prod </h1>
+<br><br><br><br>
+
+
+<div ng-repeat="e in bundle">
+
+	<div class="spanBottomLine">
+		<h2>Bundle {{$index}} </h2>
+		<div class="row">
+			<div class="col-md-3">
+				<h4>StarTime {{e.bundleStartTime}}</h4>
+			</div>
+			<div class="col-md-3">
+				<h4>EndTime {{e.bundleEndTime}}</h4>
+			</div>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{e.eventName}}</h3>
+			</div>
+			<div class="panel-body">
+				<div class="jumbotron">
+					<div class="row">
+						<div class="col-md-4">
+							<p> StartTime {{e.startTime}} </p>
+							<p> EndTime {{e.endTime}}: </p>
+						</div>
+						<div class="col-md-6">
+							<p> Address {{e.address}} </p>
+							<p>Info {{e.info}} </p>
+						</div>
+						<div class="col-md-2">
+							<p> Price{{e.price}} </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',
-'tmh.dynamicLocale'
+    'tmh.dynamicLocale'
   ])
   .constant('DEBUG_MODE', /*DEBUG_MODE*/true/*DEBUG_MODE*/)
   .constant('VERSION_TAG', /*VERSION_TAG_START*/new Date().getTime()/*VERSION_TAG_END*/)
@@ -27,7 +27,7 @@ angular
       'en_US': 'English'
     },
     'preferredLocale': 'en_US'
-})
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -44,21 +44,27 @@ angular
         templateUrl: 'views/tripSelection.html',
         controller: 'TripSelectionCtrl',
         controllerAs: 'tripSelection'
-      }).when('/login', {
+      })
+      .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
+      })
+      .when('/bundle', {
+        templateUrl: 'views/bundle.html',
+        controller: 'BundleCtrl',
+        controllerAs: 'bundle'
       })
       .when('/event', {
         templateUrl: 'views/event.html',
         controller: 'EventCtrl',
         controllerAs: 'event'
       })
-    .when('/user/:id', {
+      .when('/user/:id', {
         templateUrl: 'views/user.html',
         controller: 'UserCtrl',
         controllerAs: 'user'
-})
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -85,4 +91,4 @@ angular
   // Angular Dynamic Locale
   .config(function (tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
-});
+  });
