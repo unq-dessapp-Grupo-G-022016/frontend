@@ -16,7 +16,8 @@
     "angular-translate-storage-local": "^2.12.1",
     "angular-translate-handler-log": "^2.12.1",
     "angular-dynamic-locale": "^0.1.32",
-    "angular-i18n": "^1.5.8"
+    "angular-i18n": "^1.5.8",
+    "angular-material": "^1.1.1"
   },
   "font-awesome": {
     "main": [

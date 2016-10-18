@@ -16,6 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngMaterial',
+    'ngMessages',
     'pascalprecht.translate',
     'tmh.dynamicLocale'
   ])

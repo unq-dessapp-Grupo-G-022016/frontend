@@ -11,5 +11,6 @@
     "views.tripSelection.SaturdayNightFever": "Volada de peluca",
     "views.tripSelection.Couple": "Pareja",
     "views.tripSelection.Surprice": "Sorpresa",
+    "views.tripSelection.ChooseADay": "Elija un día",
     "directives.language-select.Language": "Idioma"
 }

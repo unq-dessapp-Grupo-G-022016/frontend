@@ -11,5 +11,6 @@
     "views.tripSelection.SaturdayNightFever": "Saturday Night Fever",
     "views.tripSelection.Couple": "Couple",
     "views.tripSelection.Surprice": "Surprice",
+    "views.tripSelection.ChooseADay": "Choose a day",
     "directives.language-select.Language": "Language"
 }
