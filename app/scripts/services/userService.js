@@ -8,6 +8,7 @@ angular.module('frontendApp')
                 method: 'get',
                 //url: apiService.url + 'user/' + id
                 url: "https://jsonplaceholder.typicode.com/posts?userId=1"
+       //         url: "http://my-app-grupog.herokuapp.com/rest/user/read/momo24"
             });
         }
       

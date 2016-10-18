@@ -22,9 +22,12 @@ angular.module('frontendApp')
 
 
     userService.get($routeParams.id).then(function (response) {
-      var user = response.data;
+      //var user = response.data;
 
-      $scope.userName = user;
+      //$scope.userName = user;
+
+
+      $scope.userName = response;
        //$scope.userName = response.data;
 
       //$scope.userName = user.username;

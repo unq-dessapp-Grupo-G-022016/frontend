@@ -11,20 +11,30 @@
     
     background-size: cover;
 }
-/*
+
+
+
+ /*
 
 body{
-    background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
-    background-image: url('http://gallery.hd.org/_exhibits/recreation/_more2000/_more10/party-in-pub-in-evening-music-light-show-people-dancing-long-exposure-posterised-3-DHD.gif');
-    background-image: url('http://cdn0.dailydot.com/cache/57/33/57334e6484ac88f67bab731491cf53b9.jpg');
+
+  border-bottom-color: red;
+  background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
+   
+  background-image: url('http://67.media.tumblr.com/4bbe7df06503b0c48891e6a6ac2d9f72/tumblr_mtjdd5o3BU1rjdox6o1_1280.gif');
+   
+ background-image: url('http://gallery.hd.org/_exhibits/recreation/_more2000/_more10/party-in-pub-in-evening-music-light-show-people-dancing-long-exposure-posterised-3-DHD.gif');
+ background-image: url('http://cdn0.dailydot.com/cache/57/33/57334e6484ac88f67bab731491cf53b9.jpg');
+     
     background-image: url('');
     
 
     
-    background-image: url('http://67.media.tumblr.com/4bbe7df06503b0c48891e6a6ac2d9f72/tumblr_mtjdd5o3BU1rjdox6o1_1280.gif');
-    background-position: right 10%;
+   */
+   
+    background-position: right 50px;
 background-size: cover;
-}*/
+}
 
 .spanBottomLine{
   border-bottom: solid 1px black;

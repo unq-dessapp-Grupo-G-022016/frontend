@@ -25,7 +25,7 @@ angular
   .constant('VERSION_TAG', /*VERSION_TAG_START*/new Date().getTime()/*VERSION_TAG_END*/)
   .constant('LOCALES', {
     'locales': {
-      'ru_RU': 'Русский',
+      //'ru_RU': 'Русский',
       'es_ES': 'Español',
       'en_US': 'English'
     },
