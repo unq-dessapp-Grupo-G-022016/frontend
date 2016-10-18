@@ -11,10 +11,26 @@ angular.module('frontendApp')
     .controller('BundleCtrl', function ($scope, bundleService, $routeParams) {
 
 
+        /*
+                bundleService.get().then(function (response) {
+                    var jsonBundle = response.data;
+                    $scope.bundleee = jsonBundle[1];
+        
+                    $scope.bundle = jsonBundle;
+        
+        
+                    //$scope.bundleStartTime
+                    // $scope.eventName = event.eventName;
+                },
+                    function (error) {
+        
+                        console.log(error);
+                    });
+        */
 
         bundleService.get().then(function (response) {
             var jsonBundle = response.data;
-            $scope.bundleee = jsonBundle[1];
+            $scope.bundleee = jsonBundle[0].id;
 
             $scope.bundle = jsonBundle;
 
@@ -26,6 +42,7 @@ angular.module('frontendApp')
 
                 console.log(error);
             });
+
 
     });
 

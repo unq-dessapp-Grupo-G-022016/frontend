@@ -21,7 +21,7 @@ angular.module('frontendApp')
             });
                       $http.get("http://validate.jsontest.com/?json=%5BJSON-code-to-validate%5D")
                       .then(function(response){
-                          $scope.moreJson = apiService.url +  "(1)" + response.data.object_or_array + "    seconds   " + response.data.parse_time_nanoseconds ;
+                          $scope.moreJson = apiService.url() +  "(1)" + response.data.object_or_array + "    seconds   " + response.data.parse_time_nanoseconds ;
                       });
 
 

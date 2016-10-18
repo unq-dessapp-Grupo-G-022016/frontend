@@ -6,7 +6,8 @@ angular.module('frontendApp')
         get: function(id){
             return $http({
                 method: 'get',
-                url: apiService.url + 'user/' + id
+                //url: apiService.url + 'user/' + id
+                url: "https://jsonplaceholder.typicode.com/posts?userId=1"
             });
         }
       

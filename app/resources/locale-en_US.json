@@ -12,5 +12,8 @@
     "views.tripSelection.Couple": "Couple",
     "views.tripSelection.Surprice": "Surprice",
     "views.tripSelection.ChooseADay": "Choose a day",
+    "views.main.TripSelection": "Trip Selection",
+    "views.main.CreateEvent": "Create Event",
+    "views.main.EditProfile": "Edit Profile",
     "directives.language-select.Language": "Language"
 }
