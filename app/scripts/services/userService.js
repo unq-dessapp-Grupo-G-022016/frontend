@@ -6,9 +6,11 @@ angular.module('frontendApp')
         get: function(id){
             return $http({
                 method: 'get',
-                //url: apiService.url + 'user/' + id
-                url: "https://jsonplaceholder.typicode.com/posts?userId=1"
-       //         url: "http://my-app-grupog.herokuapp.com/rest/user/read/momo24"
+        //        url: apiService.url + "rest/user/read/" + id
+                url: "http://my-app-grupog.herokuapp.com/rest/user/read/" + id
+      
+                //url: "https://jsonplaceholder.typicode.com/posts?userId=1"
+         //       url: "http://my-app-grupog.herokuapp.com/rest/user/users"
             });
         }
       

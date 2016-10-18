@@ -15,5 +15,11 @@
     "views.main.TripSelection": "Trip Selection",
     "views.main.CreateEvent": "Create Event",
     "views.main.EditProfile": "Edit Profile",
+    "views.user.Username": "Username",
+    "views.user.Categories": "Preferences",
+    "views.user.LowCostTrip": "Low cost trip",
+    "views.user.Friends": "Friends",
+    "views.user.PersonalEvents": "Personal Events",
+    "views.user.AttendedEvents": "Attended Events",
     "directives.language-select.Language": "Language"
 }

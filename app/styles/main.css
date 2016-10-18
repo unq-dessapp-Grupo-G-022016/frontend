@@ -7,18 +7,26 @@
 
 
 .qwe{
-  background-image: url('https://media.giphy.com/media/11kn6DFp9BNqWA/giphy.gif');
-    
+    background-color: white;  
     background-size: cover;
 }
 
 
 
- /*
+body{
+  
+  background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
+background-size: cover;
+   
+}
 
+
+
+ /*
 body{
 
   border-bottom-color: red;
+
   background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
    
   background-image: url('http://67.media.tumblr.com/4bbe7df06503b0c48891e6a6ac2d9f72/tumblr_mtjdd5o3BU1rjdox6o1_1280.gif');
@@ -27,9 +35,7 @@ body{
  background-image: url('http://cdn0.dailydot.com/cache/57/33/57334e6484ac88f67bab731491cf53b9.jpg');
      
     background-image: url('');
-    
-
-    
+      
     background-position: right 50px;
 background-size: cover;
 }
@@ -57,7 +63,9 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+
+/*  border-bottom: 1px solid #e5e5e5;
+*/
   margin-bottom: 10px;
 }
 /* Make the masthead heading the same height as the navigation */
@@ -72,7 +80,9 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
+  /*
   border-top: 1px solid #e5e5e5;
+*/
 }
 
 .container-narrow > hr {

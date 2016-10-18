@@ -1,16 +1,47 @@
+<div class="jumbotron">
+
+
 <p>This is the user view.</p>
 
 <!--{{userName}}-->
 
-<span>{{userName | json}}</span>
+
+<h3>{{"views.user.Username" | translate}}</h3>
+
+{{userName}}
+
+<br>
+
+
+<h3>{{"views.user.Categories" | translate}}</h3>
 
 {{categories}}
 
+
+<br>
+
+<h3>{{"views.user.LowCostTrip" | translate}}</h3>
+
 {{lowCostTrip}}
+
+
+<br>
+
+<h3>{{"views.user.Friends" | translate}}</h3>
 
 {{friends}}
 
+
+<br>
+
+<h3>{{"views.user.PersonalEvents" | translate}}</h3>
+
 {{personalEvents}}
+
+
+<br>
+
+<h3>{{"views.user.AttendedEvents" | translate}}</h3>
 
 {{attendedEvents}}
 
@@ -18,3 +49,4 @@
 
 
 
+</div>
