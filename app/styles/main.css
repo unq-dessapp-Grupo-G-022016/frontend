@@ -5,6 +5,9 @@
   padding: 0.2em 0;
 }
 
+.navbar{
+  margin-bottom: 0px; 
+}
 
 .qwe{
     background-color: red;  
@@ -19,7 +22,6 @@
 .gifDance{
   background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
 background-size: cover;
-
 }
 
 /*
@@ -99,8 +101,11 @@ body {
   margin: 0px 0;
 }
 
+
+
 /* Main marketing message and sign up button */
 .jumbotron {
+  margin-top: 15px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
