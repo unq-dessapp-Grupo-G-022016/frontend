@@ -67,9 +67,14 @@ angular
         templateUrl: 'views/user.html',
         controller: 'UserCtrl',
         controllerAs: 'user'
+      }).
+      when('/deadLink', {
+        templateUrl: 'views/deadLink.html',
+        controller: 'DeadLinkCtrl',
+        controllerAs: 'deadLink'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/deadLink'
       });
   })// Angular debug info
   .config(function ($compileProvider, DEBUG_MODE) {
