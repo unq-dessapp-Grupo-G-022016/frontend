@@ -1,86 +1,91 @@
-<p>This is the bundle view.</p>
-
-{{bundleee}}
+<div class="container">
 
 
-<h1>try</h1>
+	<p>This is the bundle view.</p>
 
-<div ng-repeat="e in bundle">
+	{{bundleee}}
 
-	<div class="spanBottomLine">
-		<h2>{{"views.bundle.Bundle" | translate}} {{$index}} </h2>
-		<div class="row">
-			<div class="col-md-3">
-				<h4>{{"views.bundle.StartTime" | translate}} {{e.id + ":00"}}</h4>
+
+	<h1>try</h1>
+
+	<div ng-repeat="e in bundle">
+
+		<div class="spanBottomLine">
+			<h2>{{"views.bundle.Bundle" | translate}} {{$index}} </h2>
+			<div class="row">
+				<div class="col-md-3">
+					<h4>{{"views.bundle.StartTime" | translate}} {{e.id + ":00"}}</h4>
+				</div>
+				<div class="col-md-3">
+					<h4>{{"views.bundle.EndTime" | translate}} {{e.id + 3+ ":00"}}</h4>
+				</div>
 			</div>
-			<div class="col-md-3">
-				<h4>{{"views.bundle.EndTime" | translate}} {{e.id + 3+ ":00"}}</h4>
-			</div>
-		</div>
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">{{eventName}}</h3>
-			</div>
-			<div class="panel-body">
-				<div class="jumbotron">
-					<div class="row">
-						<div class="col-md-4">
-							<p> {{"views.bundle.StartTime" | translate}} {{e.id+ ":00"}} </p>
-							<p> {{"views.bundle.EndTime" | translate}} {{e.id+1+ ":00"}} </p>
-						</div>
-						<div class="col-md-6">
-							<p> {{"views.bundle.Address" | translate}} {{e.title}} </p>
-							<p>{{"views.bundle.Information" | translate}} {{e.body}} </p>
-						</div>
-						<div class="col-md-2">
-							<p> {{"views.bundle.Price" | translate}} : {{e.userId}} </p>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{eventName}}</h3>
+				</div>
+				<div class="panel-body">
+					<div class="jumbotron">
+						<div class="row">
+							<div class="col-md-4">
+								<p> {{"views.bundle.StartTime" | translate}} {{e.id+ ":00"}} </p>
+								<p> {{"views.bundle.EndTime" | translate}} {{e.id+1+ ":00"}} </p>
+							</div>
+							<div class="col-md-6">
+								<p> {{"views.bundle.Address" | translate}} {{e.title}} </p>
+								<p>{{"views.bundle.Information" | translate}} {{e.body}} </p>
+							</div>
+							<div class="col-md-2">
+								<p> {{"views.bundle.Price" | translate}} : {{e.userId}} </p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
-<br><br><br><br>
-<h1> prod </h1>
-<br><br><br><br>
+	<br><br><br><br>
+	<h1> prod </h1>
+	<br><br><br><br>
 
 
-<div ng-repeat="e in bundle">
+	<div ng-repeat="e in bundle">
 
-	<div class="spanBottomLine">
-		<h2>Bundle {{$index}} </h2>
-		<div class="row">
-			<div class="col-md-3">
-				<h4>StarTime {{e.bundleStartTime}}</h4>
+		<div class="spanBottomLine">
+			<h2>Bundle {{$index}} </h2>
+			<div class="row">
+				<div class="col-md-3">
+					<h4>StarTime {{e.bundleStartTime}}</h4>
+				</div>
+				<div class="col-md-3">
+					<h4>EndTime {{e.bundleEndTime}}</h4>
+				</div>
 			</div>
-			<div class="col-md-3">
-				<h4>EndTime {{e.bundleEndTime}}</h4>
-			</div>
-		</div>
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">{{e.eventName}}</h3>
-			</div>
-			<div class="panel-body">
-				<div class="jumbotron">
-					<div class="row">
-						<div class="col-md-4">
-							<p> StartTime {{e.startTime}} </p>
-							<p> EndTime {{e.endTime}}: </p>
-						</div>
-						<div class="col-md-6">
-							<p> Address {{e.address}} </p>
-							<p>Info {{e.info}} </p>
-						</div>
-						<div class="col-md-2">
-							<p> Price{{e.price}} </p>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{e.eventName}}</h3>
+				</div>
+				<div class="panel-body">
+					<div class="jumbotron">
+						<div class="row">
+							<div class="col-md-4">
+								<p> StartTime {{e.startTime}} </p>
+								<p> EndTime {{e.endTime}}: </p>
+							</div>
+							<div class="col-md-6">
+								<p> Address {{e.address}} </p>
+								<p>Info {{e.info}} </p>
+							</div>
+							<div class="col-md-2">
+								<p> Price{{e.price}} </p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </div>

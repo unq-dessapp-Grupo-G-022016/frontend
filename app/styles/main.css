@@ -7,7 +7,7 @@
 
 
 .qwe{
-    background-color: white;  
+    background-color: red;  
     background-size: cover;
 }
 
@@ -15,6 +15,12 @@
   background-color: #0f7b47;
 }
 
+
+.gifDance{
+  background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
+background-size: cover;
+
+}
 
 /*
 body{
@@ -61,8 +67,8 @@ body {
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* Custom page header */
@@ -70,14 +76,14 @@ body {
 
 /*  border-bottom: 1px solid #e5e5e5;
 */
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
+  padding-bottom: 0px;
 }
 
 /* Custom page footer */
@@ -90,7 +96,7 @@ body {
 }
 
 .container-narrow > hr {
-  margin: 30px 0;
+  margin: 0px 0;
 }
 
 /* Main marketing message and sign up button */
@@ -126,7 +132,7 @@ body {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
