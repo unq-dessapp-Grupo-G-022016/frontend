@@ -73,6 +73,12 @@ angular
         controller: 'DeadLinkCtrl',
         controllerAs: 'deadLink'
       })
+      .
+      when('/dev', {
+        templateUrl: 'views/dev.html',
+        controller: 'DeavCtrl',
+        controllerAs: 'dev'
+      })
       .otherwise({
         redirectTo: '/deadLink'
       });
