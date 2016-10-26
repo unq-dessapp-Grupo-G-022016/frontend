@@ -58,3 +58,7 @@ angular.module('frontendApp')
         });
     };
   });
+
+
+
+  /**  session cookie   userId */
