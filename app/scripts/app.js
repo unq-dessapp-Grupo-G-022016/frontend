@@ -76,7 +76,7 @@ angular
       .
       when('/dev', {
         templateUrl: 'views/dev.html',
-        controller: 'DeavCtrl',
+        controller: 'DevCtrl',
         controllerAs: 'dev'
       })
       .otherwise({

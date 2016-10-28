@@ -8,7 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('DeavCtrl', function ($scope) {
+  .controller('DevCtrl', function ($scope) {
 
     $scope.fst = "testBind";
     $scope.display = "display";
@@ -22,13 +22,13 @@ angular.module('frontendApp')
 
       $scope.display = "show ok";
       $scope.fst = varr;
-    }
+    };
 
     $scope.cancel = function () {
 
       $scope.display = "display";
       $scope.fst = "  testBind";
-    }
+    };
 
 
 
@@ -45,6 +45,8 @@ angular.module('frontendApp')
           location.assign("http://www.asd.com");
     */
 
+/*
+
     $scope.save = function (varr) {
       VehicleService.save(varr).then(function (response) {
 
@@ -57,6 +59,8 @@ angular.module('frontendApp')
           console.log(error);
         });
     };
+
+    */
   });
 
 

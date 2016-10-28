@@ -10,11 +10,11 @@ angular.module('frontendApp')
                 });
             },
 
-            save: function (newVehicle) {
+            save: function (newEvent) {
                 return $http({
                     method: 'post',
-                    url: ENV.apiEndpoint + 'event/create',
-                    data: newVehicle
+                    url:  'http://localhost:8080/rest/event/create/',
+                    data: newEvent
                 });
             }
 
