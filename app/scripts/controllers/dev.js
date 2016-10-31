@@ -8,15 +8,47 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('DevCtrl', function ($scope) {
+  .controller('DevCtrl', function ($scope, devService) {
 
     $scope.fst = "testBind";
     $scope.display = "display";
 
-    $scope.newVar = {
-      brand: '',
-      capacity: 2
-    };
+    /*
+        $scope.newVar = {
+          brand: '',
+          capacity: 2
+        };
+    
+    */
+
+    /*
+        $scope.newVar =
+          {
+            "startTime": "2011-12-03T10:15:30",
+            "category": { "name": "warm places" },
+            "endTime": "2011-12-03T10:15:30",
+            "price": { "ammount": 20 },
+            "attenders": [], "details": "Devils house",
+            "address": "666",
+            "name": "goingToHell"
+          };
+    */
+
+
+    $scope.newVar =
+      {
+        startTime: "2011-12-03T10:15:30",
+        category: { name: "warm places" },
+        endTime: "2011-12-03T10:15:30",
+        price: { ammount: 20 },
+        attenders: [],
+        details: "Devils house",
+        address: "666",
+        name: "goingToHell"
+      };
+
+
+
 
     $scope.show = function (varr) {
 
@@ -33,34 +65,21 @@ angular.module('frontendApp')
 
 
     $scope.save = function (event) {
-      EventService.save(event).then(function (response) {
-        $window.location.assign('/#/event/' + response.data.id);
+      devService.save(event).then(function (response) {
+        $scope.fst = "saveOk";
+        $scope.display = "saveOk";
+
       },
         function (error) {
+          $scope.fst = "saveFail";
+          $scope.display = "saveFail";
           console.log(error);
         });
     };
 
-    /*
-          location.assign("http://www.asd.com");
-    */
-
-/*
-
-    $scope.save = function (varr) {
-      VehicleService.save(varr).then(function (response) {
 
 
-        $scope.display = "ok";
-        $scope.fst = vehicle;
-      },
-        function (error) {
-          $scope.display = "not ok";
-          console.log(error);
-        });
-    };
 
-    */
   });
 
 
