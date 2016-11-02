@@ -30,8 +30,9 @@ angular.module('frontendApp')
 
         bundleService.get().then(function (response) {
             var jsonBundle = response.data;
-            $scope.bundleee = jsonBundle[0].id;
-
+            //$scope.bundleee = jsonBundle[0].id;
+            $scope.bundleee = "event0Name :="+ jsonBundle[0].name;
+            
             $scope.bundle = jsonBundle;
 
 

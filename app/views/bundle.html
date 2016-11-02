@@ -5,7 +5,7 @@
 
 	{{bundleee}}
 
-
+<!--   
 	<h1>try</h1>
 
 	<div ng-repeat="e in bundle">
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</div>
-
+-->
 
 	<br><br><br><br>
 	<h1> prod </h1>
@@ -54,32 +54,37 @@
 	<div ng-repeat="e in bundle">
 
 		<div class="spanBottomLine">
-			<h2>Bundle {{$index}} </h2>
+			<h3>Event {{$index}} </h3>
+			<!--
 			<div class="row">
 				<div class="col-md-3">
-					<h4>StarTime {{e.bundleStartTime}}</h4>
+					<h4>StarTime : {{e.bundleStartTime}}</h4>
 				</div>
 				<div class="col-md-3">
-					<h4>EndTime {{e.bundleEndTime}}</h4>
+					<h4>EndTime : {{e.bundleEndTime}}</h4>
 				</div>
 			</div>
+-->
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title">{{e.eventName}}</h3>
+					<h3 class="panel-title">{{e.name}}</h3>
 				</div>
 				<div class="panel-body">
 					<div class="jumbotron">
 						<div class="row">
 							<div class="col-md-4">
-								<p> StartTime {{e.startTime}} </p>
-								<p> EndTime {{e.endTime}}: </p>
+								<p> From : {{e.startTime.slice(0,10)}} | {{e.startTime.slice(11,19)}} </p>
+								
+								<p> To : {{e.endTime.slice(0,10)}} | {{e.endTime.slice(11,19)}} </p>
+								
+								
 							</div>
 							<div class="col-md-6">
-								<p> Address {{e.address}} </p>
-								<p>Info {{e.info}} </p>
+								<p> Address : {{e.address}} </p>
+								<p>Info : {{e.details}} </p>
 							</div>
 							<div class="col-md-2">
-								<p> Price{{e.price}} </p>
+								<p> Price : {{e.price.ammount}} </p>
 							</div>
 						</div>
 					</div>
