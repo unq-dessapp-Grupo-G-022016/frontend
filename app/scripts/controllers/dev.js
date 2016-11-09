@@ -1,14 +1,19 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name frontendApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the frontendApp
+ * date formater
+ * pagination
+ * responsive
+ * oauth
+ * Asistire
+ * circulo amistad  addFriend/user/friend 
+ * login logout
+ * crud user
+
+
  */
 angular.module('frontendApp')
-  .controller('DevCtrl', function ($scope, devService) {
+  .controller('DevCtrl', function ($scope, devService, $http) {
 
     $scope.fst = "testBind";
     $scope.display = "display";
@@ -110,6 +115,31 @@ angular.module('frontendApp')
         });
     };
 
+
+
+    $http({
+      method: 'get',
+      //url: "http://my-app-grupog.herokuapp.com/rest/event/events"
+       url: "https://jsonplaceholder.typicode.com/comments"
+      // url: apiService.url + 'bundle/' + 
+    })
+      .then(function (response) {
+        var jsonBundle = response.data;
+        //$scope.bundleee = jsonBundle[0].id;
+        $scope.bundleee = "event0Name :=" + jsonBundle[0].name;
+
+        //$scope.bundle = jsonBundle;
+
+        $scope.item = jsonBundle;
+
+
+        //$scope.bundleStartTime
+        // $scope.eventName = event.eventName;
+      },
+      function (error) {
+
+        console.log(error);
+      });
 
 
 
