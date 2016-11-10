@@ -28,6 +28,10 @@ angular.module('frontendApp')
                     });
         */
 
+        
+$scope.currentPage = 1;
+  $scope.pageSize = 10;
+
         bundleService.get().then(function (response) {
             var jsonBundle = response.data;
             //$scope.bundleee = jsonBundle[0].id;

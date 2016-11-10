@@ -130,7 +130,7 @@ angular.module('frontendApp')
 
         //$scope.bundle = jsonBundle;
 
-        $scope.item = jsonBundle;
+        $scope.items = jsonBundle;
 
 
         //$scope.bundleStartTime
@@ -140,6 +140,11 @@ angular.module('frontendApp')
 
         console.log(error);
       });
+
+
+
+
+
 
 
 

@@ -18,11 +18,30 @@
   background-color: #0f7b47;
 }
 
+.whiteBackground{
+      
+  background-color: white;
+}
+
+/*
+.whiteBackground{
+          background: rgba(255, 255, 255, 0.5);
+             
+}
+*/
 
 .gifDance{
   background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
 background-size: cover;
 }
+
+.gifDanceFixed{
+  background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
+  background-size: cover;
+ background-attachment: fixed;
+}
+
+
 
 /*
 body{
