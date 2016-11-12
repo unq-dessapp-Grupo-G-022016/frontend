@@ -75,6 +75,12 @@ angular
         controllerAs: 'deadLink'
       })
       .
+      when('/createEvent', {
+        templateUrl: 'views/createEvent.html',
+        controller: 'CreateEventCtrl',
+        controllerAs: 'createEvent'
+      })
+      .
       when('/dev', {
         templateUrl: 'views/dev.html',
         controller: 'DevCtrl',

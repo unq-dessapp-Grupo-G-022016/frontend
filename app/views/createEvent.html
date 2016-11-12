@@ -1,0 +1,52 @@
+<div class="container">
+
+
+
+
+
+
+    <div class="well ">
+        <h1 class="text-center">Create Event</h1>
+        <form novalidate class="form-horizontal">
+
+
+
+            <input ng-model="newEvent.address" type="text" class="form-control" placeholder="Address">
+            <input ng-model="newEvent.name" type="text" class="form-control" placeholder="Name">
+            <input ng-model="newEvent.price.ammount" type="text" class="form-control" placeholder="Price">
+
+            <input ng-model="newEvent.attenders.maxCapacity" type="text" class="form-control" placeholder="MaxCapacity">
+            <input ng-model="newEvent.attenders.recommendedMinGroup" type="text" class="form-control" placeholder="RecommendedMinGroup">
+            <input ng-model="newEvent.attenders.recommendedMaxGroup" type="text" class="form-control" placeholder="RecommendedMaxGroup">
+
+            <input ng-model="newEvent.details" type="text" class="form-control" placeholder="Details">
+
+
+
+
+            <div class="form-group jumbotron">
+                <div class="">
+                    <button type="submit" ng-click="save(newEvent)" class="btn btn-success btn-block">Create</button>
+
+                </div>
+            </div>
+
+
+
+            <!--
+            {{event}}
+            <div class="form-group">
+                <div class="">
+                    <button type="submit" ng-click="show(newEvent)" class="btn btn-lg btn-success">Show</button>
+
+                </div>
+            </div>
+-->
+
+        </form>
+    </div>
+
+
+
+
+</div>

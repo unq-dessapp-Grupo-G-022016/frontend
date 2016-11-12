@@ -1,14 +1,17 @@
 'use strict';
 
 /**
- * date formater
- * pagination
- * responsive
+ * Done - date formater  
+ *     -  Improves -> moment.locale('en'); // 'en'
+ * Done - pagination
+ *      - Improves -> hybrid
+ * Done - responsive
  * oauth
  * Asistire
  * circulo amistad  addFriend/user/friend 
  * login logout
  * crud user
+ * fully translate
 
 
  */
@@ -42,15 +45,19 @@ angular.module('frontendApp')
 
     $scope.newVar =
       {
-        startTime: "2011-12-03T10:15:30",
-        category: { name: "warm places" },
-        endTime: "2011-12-03T10:15:30",
-        price: { ammount: 20 },
-        attenders: [],
-        details: "Devils house",
-        address: "666",
-        name: "goingToHell"
+        address: "",
+        name: "",
+        id: 2,
+        price: { ammount: "" },
+        endTime: "2016-11-04T15:33:19.432",
+        attenders: { maxCapacity: "", recommendedMinGroup: "", recommendedMaxGroup: "" },
+        details: "",
+        profile: { id: 1, categories: [{ name: "" }] },
+        day: 20161104,
+        startTime: "2016-11-04T15:33:19.432"
       };
+
+
 
 
 
@@ -120,7 +127,7 @@ angular.module('frontendApp')
     $http({
       method: 'get',
       //url: "http://my-app-grupog.herokuapp.com/rest/event/events"
-       url: "https://jsonplaceholder.typicode.com/comments"
+      url: "https://jsonplaceholder.typicode.com/comments"
       // url: apiService.url + 'bundle/' + 
     })
       .then(function (response) {
@@ -144,9 +151,9 @@ angular.module('frontendApp')
 
 
 
-       var x = document.documentElement.lang;
+    var x = document.documentElement.lang;
 
-       $scope.lang = x;
+    $scope.lang = x;
 
 
 

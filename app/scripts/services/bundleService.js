@@ -2,7 +2,7 @@
 
 angular.module('frontendApp')
     .service('bundleService', function ($http, apiService) {
-        return {
+        return {/*
             get: function () {
                 return $http({
                     method: 'get',
@@ -11,6 +11,12 @@ angular.module('frontendApp')
                     // url: apiService.url + 'bundle/' + 
                 });
             }
+*/
+
+            get: function () {
+                return apiService.get("rest/event/events");
+            }
+
 
             /*
             get: function () {
