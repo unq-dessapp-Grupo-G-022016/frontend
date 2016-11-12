@@ -144,6 +144,10 @@ angular.module('frontendApp')
 
 
 
+       var x = document.documentElement.lang;
+
+       $scope.lang = x;
+
 
 
 

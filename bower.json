@@ -18,7 +18,8 @@
     "angular-dynamic-locale": "^0.1.32",
     "angular-i18n": "^1.5.8",
     "angular-material": "^1.1.1",
-    "angularUtils-pagination": "angular-utils-pagination#^0.11.1"
+    "angularUtils-pagination": "angular-utils-pagination#^0.11.1",
+    "moment": "^2.16.0"
   },
   "font-awesome": {
     "main": [

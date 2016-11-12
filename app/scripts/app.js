@@ -88,6 +88,20 @@ angular
     if (!DEBUG_MODE) {
       $compileProvider.debugInfoEnabled(false);// disables AngularJS debug info
     }
+  })//md datePicker config 
+  .config(function ($mdDateLocaleProvider) {
+    $mdDateLocaleProvider.formatDate = function (date) {
+
+      var format = 'YYYY-MM-DD';
+
+      if (document.documentElement.lang === 'es_ES') {
+        format = 'DD-MM-YYYY';
+      }
+      if (document.documentElement.lang === 'en_US') {
+        format = 'MM-DD-YYYY';
+      }
+      return moment(date).format(format);
+    };
   })
   // Angular Translate
   .config(function ($translateProvider, DEBUG_MODE, LOCALES) {
