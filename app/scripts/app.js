@@ -20,7 +20,8 @@ angular
     'ngMessages',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
-    'angularUtils.directives.dirPagination'
+    'angularUtils.directives.dirPagination',
+    'auth0'
   ])
   .constant('DEBUG_MODE', /*DEBUG_MODE*/true/*DEBUG_MODE*/)
   .constant('VERSION_TAG', /*VERSION_TAG_START*/new Date().getTime()/*VERSION_TAG_END*/)
@@ -80,6 +81,13 @@ angular
         controller: 'CreateEventCtrl',
         controllerAs: 'createEvent'
       })
+
+      .
+      when('/createUser', {
+        templateUrl: 'views/createUser.html',
+        controller: 'CreateUserCtrl',
+        controllerAs: 'createUser'
+      })
       .
       when('/dev', {
         templateUrl: 'views/dev.html',
@@ -109,6 +117,43 @@ angular
       return moment(date).format(format);
     };
   })
+
+
+
+
+
+
+  .config(function (authProvider) {
+
+    // routing configuration and other stuff
+    // ...
+
+    authProvider.init({
+      domain: 'leog91.auth0.com',
+      clientID: 'Mo2QtJnd5jzZ1NVldzRiUOlwSGmkdEM4',
+      loginUrl: '/login'
+    });
+  })
+  .run(function (auth) {
+    auth.hookEvents();
+  })
+
+
+
+
+
+
+  /*
+    //angular-google-plus auth 
+    .config(['GooglePlusProvider', function (GooglePlusProvider) {
+      GooglePlusProvider.init({
+        clientId: '938236716494-52clc04blo96trmo3l3lktrv6qi82eiv.apps.googleusercontent.com',
+        apiKey: 'AIzaSyCcC89qple1Ln_O5LC82_pTVR3C9mFXihs'
+      });
+    }])
+  
+  */
+
   // Angular Translate
   .config(function ($translateProvider, DEBUG_MODE, LOCALES) {
     if (DEBUG_MODE) {

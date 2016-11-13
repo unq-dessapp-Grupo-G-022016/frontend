@@ -2,7 +2,7 @@
 
 
 angular.module('frontendApp')
-    .controller('CreateEventCtrl', function ($scope, createEventService) {
+    .controller('CreateEventCtrl', function ($scope, createEventService, $window) {
 
 
 
@@ -31,6 +31,7 @@ angular.module('frontendApp')
         $scope.save = function (event) {
             createEventService.save(event).then(function (response) {
                 // $scope.notif = ok;
+                //$window.location.href = '/#/user/adasdd' ;
 
             },
                 function (error) {

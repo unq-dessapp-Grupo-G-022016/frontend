@@ -1,0 +1,35 @@
+<div class="container">
+
+
+<!--
+    {{event}} {{newUser}} {{newUser}}
+-->
+
+
+    <div class="well ">
+        <h1 class="text-center">Create User</h1>
+        <form novalidate class="form-horizontal">
+
+
+
+            <input ng-model="newUser.userName" type="text" class="form-control" placeholder="userName">
+
+            <input ng-model="newUser.lowCostTrip.ammount" type="text" class="form-control" placeholder="Price">
+
+
+
+
+            <div class="form-group jumbotron">
+                <div class="">
+                    <button type="submit" ng-click="save(newUser)" class="btn btn-success btn-block">Create</button>
+
+                </div>
+            </div>
+
+
+
+
+        </form>
+    </div>
+
+</div>

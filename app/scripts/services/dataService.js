@@ -2,6 +2,11 @@
 
 angular.module('frontendApp')
     .service('dataService', function ($http, apiService) {
+
+        var auth = {};
+
+
+
         var Product = {
 
             name: '',
@@ -10,16 +15,23 @@ angular.module('frontendApp')
 
         };
         return {
-           
+
             getData: function () {
                 return Product;
             },
 
-           
+            userSave: function (data) {
+                auth = data;
+            },
+
+            getUser: function(){
+                return auth;
+            },
+
             get: function () {
                 return $http({
                     method: 'get',
-                    url: apiService.url + 'event/' 
+                    url: apiService.url + 'event/'
                 });
             },
 

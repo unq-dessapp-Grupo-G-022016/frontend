@@ -40,6 +40,12 @@ module.exports = function(config) {
       'bower_components/angular-material/angular-material.js',
       'bower_components/angularUtils-pagination/dirPagination.js',
       'bower_components/moment/moment.js',
+      'bower_components/angular-google-plus/dist/angular-google-plus.js',
+      'bower_components/auth0-lock/build/auth0-lock.js',
+      'bower_components/auth0.js/build/auth0.js',
+      'bower_components/auth0-angular/build/auth0-angular.js',
+      'bower_components/angular-lock/angular-lock.js',
+      'bower_components/angular-jwt/dist/angular-jwt.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
