@@ -123,7 +123,7 @@ angular
 
 
 
-
+/*
   .config(function (authProvider) {
 
     // routing configuration and other stuff
@@ -138,7 +138,7 @@ angular
   .run(function (auth) {
     auth.hookEvents();
   })
-
+*/
 
 
 
