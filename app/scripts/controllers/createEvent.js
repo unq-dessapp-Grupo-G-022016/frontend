@@ -22,7 +22,8 @@ angular.module('frontendApp')
                 profile: { //id: 1, 
                     categories: [{ name: "" }] },
                 //day: 20161104,
-                startTime: "2016-11-04T15:33:19.432"
+                startTime: "2016-11-04T15:33:19.432",
+                strictSchedule: true
             };
 
 
