@@ -46,6 +46,9 @@ module.exports = function(config) {
       'bower_components/auth0-angular/build/auth0-angular.js',
       'bower_components/angular-lock/angular-lock.js',
       'bower_components/angular-jwt/dist/angular-jwt.js',
+      'bower_components/momentjs/moment.js',
+      'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
+      'bower_components/angular-material-datetimepicker/js/angular-material-datetimepicker.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

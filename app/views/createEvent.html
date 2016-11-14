@@ -1,8 +1,9 @@
 <div class="container">
 
 
+ {{time}} {{myDate}}
 
-
+slice {{myDate.slice(3,6)}}
 
 
     <div class="well ">
@@ -21,7 +22,20 @@
 
             <input ng-model="newEvent.details" type="text" class="form-control" placeholder="Details">
 
+            <br>
 
+            <div ng-cloak>
+                <div layout-gt-xs="row">
+                    <div flex-gt-xs>
+                        <h4>{{"views.tripSelection.ChooseADay" | translate}}</h4>
+                        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                    </div>
+                </div>
+            </div>
+
+
+            <input mdc-datetime-picker="" date="false" time="true" type="text" id="time2" placeholder="Time" min-date="minDate" format="HH:mm"
+                ng-model="time" class=" md-input">
 
 
             <div class="form-group jumbotron">
@@ -31,9 +45,10 @@
                 </div>
             </div>
 
+{{preDateF}}
+<br>
+{{postDatef}}
 
-
-            <!--
             {{event}}
             <div class="form-group">
                 <div class="">
@@ -41,7 +56,7 @@
 
                 </div>
             </div>
--->
+
 
         </form>
     </div>

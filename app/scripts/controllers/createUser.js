@@ -31,15 +31,16 @@ angular.module('frontendApp')
 
 
         $scope.save = function (user) {
-            createUserService.save(user).then(function (response) {
+            var juser = JSON.stringify(user);
+            createUserService.save(juser).then(function (response) {
                 // $scope.notif = ok;
                 //$window.location.href = '/#/user/' + $scope.newUser.userName;
-                $window.location.href = '/#/home/' ;
+                //$window.location.href = '/#/home/' ;
 
             },
                 function (error) {
                     // $scope.notif = ok;
-                    //console.log(error);
+                    console.log(error);
                 });
         };
 

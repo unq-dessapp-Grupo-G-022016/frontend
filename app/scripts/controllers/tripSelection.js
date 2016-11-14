@@ -10,6 +10,9 @@
 
 angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope) {
 
+
+
+
   $scope.myDate = new Date();
 
   $scope.minDate = new Date(
@@ -26,5 +29,15 @@ angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope) 
     var day = date.getDay();
     return day === 0 || day === 6;
   };
+
+
+
+  $scope.date = new Date();
+  $scope.time = new Date();
+  $scope.dateTime = new Date();
+  $scope.minDate = moment().subtract(1, 'month');
+  $scope.maxDate = moment().add(1, 'month');
+
+
 
 });

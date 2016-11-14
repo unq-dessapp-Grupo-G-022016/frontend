@@ -1,5 +1,13 @@
 <div class="container">
+	<br> {{myDate}}
+
 	<br>
+{{time}}
+	<br> {{date}}
+
+
+
+
 	<div class="well well-lg">
 
 		<br>
@@ -23,6 +31,23 @@
 				</div>
 			</div>
 		</div>
+
+		<br>
+
+		<!--<div class="container">
+			<input mdc-datetime-picker="" date="true" time="true" type="text" id="datetime" placeholder="Date" min-date="date" ng-model="dateTime"
+				class=" md-input">
+		</div>
+-->
+		<input mdc-datetime-picker="" date="false" time="true" type="text" id="time2" placeholder="Time" min-date="minDate" format="HH:mm"
+			ng-model="time" class=" md-input">
+
+
+
+
+
+
+
 
 	</div>
 

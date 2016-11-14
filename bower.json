@@ -23,7 +23,9 @@
     "angular-google-plus": "^0.1.3",
     "auth0-angular": "^4.2.7",
     "angular-lock": "^1.0.5",
-    "angular-jwt": "^0.1.8"
+    "angular-jwt": "^0.1.8",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.43",
+    "angular-material-datetimepicker": "^1.4.0"
   },
   "font-awesome": {
     "main": [
@@ -48,6 +50,7 @@
   "resolutions": {
     "font-awesome": "~4.5",
     "angular": "1.5.8",
-    "auth0-lock": "9.2.2"
+    "auth0-lock": "9.2.2",
+    "angular-material": "^1.1.1"
   }
 }
