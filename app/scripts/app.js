@@ -57,6 +57,11 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+      .when('/login2', {
+        templateUrl: 'views/login2.html',
+        //controller: 'LoginCtrl',
+        //controllerAs: 'login'
+      })
       .when('/bundle', {
         templateUrl: 'views/bundle.html',
         controller: 'BundleCtrl',
