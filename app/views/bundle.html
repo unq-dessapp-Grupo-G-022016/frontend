@@ -2,8 +2,10 @@
 	<div class="container whiteBackground noTrans">
 
 
+<!--
 
-
+		{{idd}}
+-->
 
 
 		<!--   
@@ -108,11 +110,14 @@
 
 									</div>
 									<div class="col-md-6">
-										<p> Address : {{e.address}} </p>
-										<p>Info : {{e.details}} </p>
+										<p>  {{"views.bundle.Address" | translate}} : {{e.address}} </p>
+										<p>{{"views.bundle.Information" | translate}} : {{e.details}} </p>
 									</div>
 									<div class="col-md-2">
-										<p> Price : {{e.price.ammount}} </p>
+
+
+										<p> {{"views.bundle.Price" | translate}} : $ {{e.price.ammount}} </p>
+
 
 										<p> Category:{{e.profile.categories[0].name}} </p>
 										<!--
@@ -122,6 +127,9 @@
 -->
 									</div>
 								</div>
+
+								<button type="button" class="btn btn-success btn-block" ng-click="Assist(e.id)" type="button">Assist</button>
+
 							</div>
 						</div>
 					</div>

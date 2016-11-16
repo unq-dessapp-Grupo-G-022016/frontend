@@ -8,7 +8,27 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-    .controller('BundleCtrl', function ($scope, bundleService, $routeParams) {
+    .controller('BundleCtrl', function ($scope, bundleService, $routeParams, apiService, $window, $location) {
+
+        $scope.idd = "prev";
+
+        var user = "momo24";
+
+        $scope.Assist = function (id) {
+            $scope.idd = id;
+            apiService.eventAssist(id, user).then(function (response) {
+                // $scope.notif = ok;
+                $window.location.href = '/#/bundle';
+                //$window.location.href = '/#/home/' ;
+
+            },
+                function (error) {
+                    // $scope.notif = ok;
+                    $window.location.href = '/#/home';
+                    console.log(error);
+                });
+
+        };
 
 
         /*
@@ -28,15 +48,15 @@ angular.module('frontendApp')
                     });
         */
 
-        
-$scope.currentPage = 1;
-  $scope.pageSize = 10;
+
+        $scope.currentPage = 1;
+        $scope.pageSize = 10;
 
         bundleService.get().then(function (response) {
             var jsonBundle = response.data;
             //$scope.bundleee = jsonBundle[0].id;
-            $scope.bundleee = "event0Name :="+ jsonBundle[0].name;
-            
+            $scope.bundleee = "event0Name :=" + jsonBundle[0].name;
+
             $scope.bundle = jsonBundle;
 
 

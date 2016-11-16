@@ -8,34 +8,88 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('LoginCtrl', function ($scope, auth) {
+  .controller('LoginCtrl', function ($scope, $rootScope, socialLoginService, userService, $window, $location) {
     $scope.aaa = "aaaasdasdaa";
 
-    $scope.bbb = "profile";
+    $scope.bbb = $rootScope.currentUser;
 
-    $scope.signin = function () {
-      auth.signin({
-        authParams: {
-          scope: 'openid name email' // Specify the scopes you want to retrieve
-        }
-      }, function (profile, idToken, accessToken, state, refreshToken) {
-        $location.path('/home')
-      }, function (err) {
-        console.log("Error :(", err);
-      });
+
+
+//    var userr;
+
+    //$scope.user = "lksñlka";
+
+    //$rootScope.user.userName = "asdas";
+
+    $scope.Logging = function () {
+
+      var userNameVar = $scope.userr.userName;
+
+      //$scope.www = userName;
+
+      userService.get(userNameVar).then(function (response) {
+
+        //$rootScope.user.userName = userNameVar;
+
+
+        $rootScope.user.userName = "momo1";
+
+
+        $window.location.href = '/#/user/' + userNameVar;
+
+      },
+        function (error) {
+          $window.location.href = '/#/createUser';
+
+        });
+
     };
 
 
 
-    
+    //$scope.bbb = $rootScope.googleUser.email;
+    //console.log($rootScope.googleUser.email);
 
-/*
-    auth.profilePromise.then(function (profile) {
-      $scope.profile = profile;
-    });
-    // Or using the object
-    $scope.profile = auth.profile;
-*/
+
+    //$scope.bbb =$rootScope.profile;
+
+
+    //$scope.bbb =$rootScope.idToken;
+
+
+    // $scope.bbb = $rootScope.userDetails;
+
+
+    $scope.logout = function () {
+      socialLoginService.logout();
+    };
+
+    //    socialLoginService.logout() ;
+
+    /*
+        $scope.signin = function () {
+          auth.signin({
+            authParams: {
+              scope: 'openid name email' // Specify the scopes you want to retrieve
+            }
+          }, function (profile, idToken, accessToken, state, refreshToken) {
+            $location.path('/home')
+          }, function (err) {
+            console.log("Error :(", err);
+          });
+        };
+    
+    */
+
+
+
+    /*
+        auth.profilePromise.then(function (profile) {
+          $scope.profile = profile;
+        });
+        // Or using the object
+        $scope.profile = auth.profile;
+    */
 
     /*
 

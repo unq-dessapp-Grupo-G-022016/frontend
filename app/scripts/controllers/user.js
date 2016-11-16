@@ -8,7 +8,28 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('UserCtrl', function ($scope, userService, $routeParams, apiService) {
+  .controller('UserCtrl', function ($scope, userService, $routeParams, apiService, $rootScope, $window, $location) {
+
+
+    $scope.AddFriend = function () {
+
+      var myUserName = $rootScope.user.userName;
+      var friendUserName = $scope.friend.userName;
+      apiService.addFriend(myUserName, friendUserName).then(function (response) {
+
+
+        $window.location.href = '/#/user/' + myUserName;
+
+      },
+        function (error) {
+          $window.location.href = '/#/user/' + myUserName;
+
+        });
+
+    };
+
+
+
 
 
     /*
@@ -31,6 +52,8 @@ $scope.lowCostTrip = apiService.get();
 
       //$scope.userName = user;
 
+
+
       $scope.userName = response.data.userName;
       $scope.categories = response.data.profile.categories;
       $scope.lowCostTrip = response.data.lowCostTrip.ammount;
@@ -39,7 +62,7 @@ $scope.lowCostTrip = apiService.get();
       $scope.attendedEvents = response.data.attendedEvents;
 
 
-       //$scope.userName = response.data;
+      //$scope.userName = response.data;
 
       //$scope.userName = user.username;
       //$scope.address = user.address;

@@ -16,6 +16,22 @@ angular.module('frontendApp')
                 });
             },
 
+            eventAssist: function (id, user) {
+                return $http({
+                    method: 'put',
+                    url: this.url() + id + "/" + user
+                });
+            },
+
+            addFriend: function (myUserName, friendUsername) {
+                return $http({
+                    method: 'put',
+                    url: this.url() + "user/addFriend" + myUserName + friendUsername
+                });
+            },
+
+
+
 
         };
     });

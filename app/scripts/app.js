@@ -15,13 +15,14 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-   // 'ngTouch',
+    // 'ngTouch',
     'ngMaterial',
     'ngMessages',
     'ngMaterialDatePicker',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
     'angularUtils.directives.dirPagination',
+    'socialLogin',
     'auth0'
   ])
   .constant('DEBUG_MODE', /*DEBUG_MODE*/true/*DEBUG_MODE*/)
@@ -123,22 +124,22 @@ angular
 
 
 
-/*
-  .config(function (authProvider) {
-
-    // routing configuration and other stuff
-    // ...
-
-    authProvider.init({
-      domain: 'leog91.auth0.com',
-      clientID: 'Mo2QtJnd5jzZ1NVldzRiUOlwSGmkdEM4',
-      loginUrl: '/login'
-    });
-  })
-  .run(function (auth) {
-    auth.hookEvents();
-  })
-*/
+  /*
+    .config(function (authProvider) {
+  
+      // routing configuration and other stuff
+      // ...
+  
+      authProvider.init({
+        domain: 'leog91.auth0.com',
+        clientID: 'Mo2QtJnd5jzZ1NVldzRiUOlwSGmkdEM4',
+        loginUrl: '/login'
+      });
+    })
+    .run(function (auth) {
+      auth.hookEvents();
+    })
+  */
 
 
 
@@ -154,6 +155,31 @@ angular
     }])
   
   */
+
+
+/*
+
+
+  .config(function (socialProvider) {
+    socialProvider.setGoogleKey("938236716494-52clc04blo96trmo3l3lktrv6qi82eiv.apps.googleusercontent.com");
+  })
+
+
+  .run(function ($rootScope) {
+    $rootScope.$on('event:social-sign-in-success', function (event, user) {
+
+      $rootScope.currentUser = user;
+    });
+
+
+  })
+
+*/
+
+
+
+
+
 
   // Angular Translate
   .config(function ($translateProvider, DEBUG_MODE, LOCALES) {

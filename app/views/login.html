@@ -1,14 +1,55 @@
-
+<div class="container">
 
 <!--
+{{userr}}
+
+{{www}}
+
+
+-->
+
+  <div>
+
+    <form novalidate class="form-horizontal">
+
+
+      <input ng-model="userr.userName" type="text" class="form-control" placeholder="userName">
+
+    </form>
+    <button type="button" class="btn btn-success btn-block" ng-click="Logging()" type="button">Loging</button>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--
 <input type="submit"  ng-click="auth.signin()" />
 -->
 
+  <button g-login type="button">Google Login</button>
 
+  <button ng-click="logout()" type="button">logout</button> {{profile}} {{$root.currentUser}} {{googleUser}} {{bbb}}
+
+  <!--
 <a href="" ng-click="signin()" />
+-->
 
-
-<!--
+  <!--
 
 <span>{{profile.name}} {{profile.email}}</span>
 
@@ -105,3 +146,4 @@
 
 
 -->
+</div>

@@ -3,6 +3,8 @@
 	<div class="jumbotron">
 
 
+
+
 		<p>This is the user view.</p>
 
 		<!--{{userName}}-->
@@ -47,6 +49,15 @@
 
 		{{attendedEvents}}
 
+
+
+		<form novalidate class="form-horizontal">
+
+
+			<input ng-model="friend.userName" type="text" class="form-control" placeholder="Friend Name">
+
+		</form>
+		<button type="button" class="btn btn-success btn-block" ng-click="AddFriend()" type="button">AddFriend</button>
 
 
 
