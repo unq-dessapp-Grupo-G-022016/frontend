@@ -8,7 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('UserCtrl', function ($scope, userService, $routeParams, apiService, $rootScope, $window, $location) {
+  .controller('UserCtrl', function ($scope, userService, $routeParams, apiService, $rootScope, $window, $location, dataService) {
 
 
     $scope.AddFriend = function () {
@@ -29,6 +29,15 @@ angular.module('frontendApp')
     };
 
 
+    $scope.userName = dataService.getUser().email;
+
+
+/*
+    var userNameWithoutMail = dataService.getUser().email.slice(0, dataService.getUser().email.indexOf("@"));
+    $scope.userName = userNameWithoutMail;
+*/
+
+    //get,  completar usuario 
 
 
 
@@ -54,7 +63,7 @@ $scope.lowCostTrip = apiService.get();
 
 
 
-      $scope.userName = response.data.userName;
+      // $scope.userName = response.data.userName;
       $scope.categories = response.data.profile.categories;
       $scope.lowCostTrip = response.data.lowCostTrip.ammount;
       $scope.friends = response.data.friends;

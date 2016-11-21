@@ -5,6 +5,8 @@
 {{www}}
 -->
 
+
+<!--
   <div>
 
     <form novalidate class="form-horizontal">
@@ -19,18 +21,20 @@
 
   </div>
 
+-->
+
+
+
+{{$rootScope.usuario}}
+
+{{qqq}}
 
 
 
 
 
 
-
-
-
-
-
-
+<br><br><br><br><br>
 
 
 
@@ -38,9 +42,11 @@
 <input type="submit"  ng-click="auth.signin()" />
 -->
 
-  <button g-login type="button">Google Login</button>
+  <button class="btn  btn-block" g-login type="button">Google Login</button>
 
-  <button ng-click="logout()" type="button">logout</button> {{profile}} {{$root.currentUser}} {{googleUser}} {{bbb}}
+  <br>
+
+  <button class="btn  btn-block" ng-click="logout()" type="button">logout</button> {{profile}} {{$root.currentUser}} {{googleUser}} {{bbb}}
 
   <!--
 <a href="" ng-click="signin()" />

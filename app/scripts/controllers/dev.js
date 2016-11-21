@@ -16,10 +16,15 @@
 
  */
 angular.module('frontendApp')
-  .controller('DevCtrl', function ($scope, devService, $http) {
+  .controller('DevCtrl', function ($scope, devService, $http, dataService) {
 
     $scope.fst = "testBind";
     $scope.display = "display";
+
+
+    $scope.uuser = dataService.getUser();
+
+    $scope.img = dataService.getUser().imageUrl;
 
     /*
         $scope.newVar = {

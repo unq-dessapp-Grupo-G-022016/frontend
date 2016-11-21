@@ -5,7 +5,7 @@ angular.module('frontendApp')
 
         var auth = {};
 
-
+        
 
         var Product = {
 

@@ -162,14 +162,14 @@ angular
   */
 
 
-/*
+
 
 
   .config(function (socialProvider) {
     socialProvider.setGoogleKey("938236716494-52clc04blo96trmo3l3lktrv6qi82eiv.apps.googleusercontent.com");
   })
 
-
+/*
   .run(function ($rootScope) {
     $rootScope.$on('event:social-sign-in-success', function (event, user) {
 

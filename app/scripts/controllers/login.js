@@ -8,14 +8,14 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('LoginCtrl', function ($scope, $rootScope, socialLoginService, userService, $window, $location) {
+  .controller('LoginCtrl', function ($scope, $rootScope, socialLoginService, dataService, userService, $window, $location, $log) {
     $scope.aaa = "aaaasdasdaa";
 
     $scope.bbb = $rootScope.currentUser;
 
+    $scope.qqq = "asda";
 
-
-//    var userr;
+    //    var userr;
 
     //$scope.user = "lksñlka";
 
@@ -44,6 +44,20 @@ angular.module('frontendApp')
         });
 
     };
+
+    $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
+      $scope.qqq = userDetails;
+      $rootScope.usuario = userDetails;
+      dataService.userSave(userDetails);
+      console.log(userDetails);
+      console.log(event);
+      console.log("biffff");
+      console.log(dataService.getUser());
+      $window.location.href = '/#/dev';
+
+    })
+
+
 
 
 

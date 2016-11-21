@@ -2,7 +2,7 @@
 
 
 angular.module('frontendApp')
-    .controller('CreateUserCtrl', function ($scope, createUserService, $window) {
+    .controller('CreateUserCtrl', function ($scope, $rootScope, createUserService, $window) {
 
 
 
