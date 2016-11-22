@@ -21,6 +21,7 @@ angular
     'ngMaterialDatePicker',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
+    'ngMap',
     'angularUtils.directives.dirPagination',
     'socialLogin',
     'auth0'

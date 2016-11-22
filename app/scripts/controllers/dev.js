@@ -16,11 +16,28 @@
 
  */
 angular.module('frontendApp')
-  .controller('DevCtrl', function ($scope, devService, $http, dataService) {
+  .controller('DevCtrl', function ($scope, devService, $http, dataService, NgMap) {
 
     $scope.fst = "testBind";
     $scope.display = "display";
 
+
+
+    //this.address = "Toronto Canada";
+    //this.address = "Roque Sáenz Peña Bernal";
+    
+    
+
+    //$scope.googleMapsUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBdJr6OdzQABIXp9IZjnAimdfuqchQCF6o";
+
+    //"AIzaSyBdJr6OdzQABIXp9IZjnAimdfuqchQCF6o"
+
+    NgMap.getMap().then(function (map) {
+      console.log(map.getCenter());
+      map.address ="Roque Sáenz Peña Bernal";
+      console.log('markers', map.markers);
+      console.log('shapes', map.shapes);
+    });
 
     $scope.uuser = dataService.getUser();
 
