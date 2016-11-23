@@ -27,7 +27,8 @@
     "eonasdan-bootstrap-datetimepicker": "^4.17.43",
     "angular-material-datetimepicker": "^1.4.0",
     "angularjs-social-login": "^2.4.5",
-    "ngmap": "^1.17.8"
+    "ngmap": "^1.17.8",
+    "angular-flash-alert": "^2.4.0"
   },
   "font-awesome": {
     "main": [

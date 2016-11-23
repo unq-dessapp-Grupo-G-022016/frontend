@@ -41,7 +41,7 @@ module.exports = function(config) {
       'bower_components/angularUtils-pagination/dirPagination.js',
       'bower_components/moment/moment.js',
       'bower_components/angular-google-plus/dist/angular-google-plus.js',
-      'bower_components/auth0-lock/build/lock.js',
+      'bower_components/auth0-lock/build/auth0-lock.js',
       'bower_components/auth0.js/build/auth0.js',
       'bower_components/auth0-angular/build/auth0-angular.js',
       'bower_components/angular-lock/angular-lock.js',
@@ -51,6 +51,7 @@ module.exports = function(config) {
       'bower_components/angular-material-datetimepicker/js/angular-material-datetimepicker.min.js',
       'bower_components/angularjs-social-login/angularjs-social-login.js',
       'bower_components/ngmap/build/scripts/ng-map.js',
+      'bower_components/angular-flash-alert/dist/angular-flash.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

@@ -24,6 +24,7 @@ angular
     'ngMap',
     'angularUtils.directives.dirPagination',
     'socialLogin',
+    'ngFlash',
     'auth0'
   ])
   .constant('DEBUG_MODE', /*DEBUG_MODE*/true/*DEBUG_MODE*/)

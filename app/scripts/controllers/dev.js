@@ -24,17 +24,19 @@ http://stackoverflow.com/questions/6660955/google-is-not-defined-when-using-goog
 
  */
 angular.module('frontendApp')
-  .controller('DevCtrl', function ($scope, devService, $http, dataService, NgMap) {
+  .controller('DevCtrl', function ($scope, devService, Flash, $http, dataService, NgMap) {
 
     $scope.fst = "testBind";
     $scope.display = "display";
 
+    var message = '<strong>Well done!</strong> You successfully read this important alert message.';
+    var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
     //this.address = "Toronto Canada";
     //this.address = "Roque Sáenz Peña Bernal";
-    
-    
+
+
 
     //$scope.googleMapsUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBdJr6OdzQABIXp9IZjnAimdfuqchQCF6o";
 
@@ -42,7 +44,7 @@ angular.module('frontendApp')
 
     NgMap.getMap().then(function (map) {
       console.log(map.getCenter());
-      map.address ="Roque Sáenz Peña Bernal";
+      map.address = "Roque Sáenz Peña Bernal";
       console.log('markers', map.markers);
       console.log('shapes', map.shapes);
     });
