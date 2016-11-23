@@ -45,17 +45,45 @@ angular.module('frontendApp')
 
     };
 
-    $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
-      $scope.qqq = userDetails;
-      $rootScope.usuario = userDetails;
-      dataService.userSave(userDetails);
-      console.log(userDetails);
-      console.log(event);
-      console.log("biffff");
-      console.log(dataService.getUser());
-      $window.location.href = '/#/dev';
 
-    })
+    /* //WORKING
+        $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
+          $scope.qqq = userDetails;
+          $rootScope.usuario = userDetails;
+          dataService.userSave(userDetails);
+          console.log(userDetails);
+          console.log(event);
+          console.log("biffff");
+          console.log(dataService.getUser());
+          $window.location.href = '/#/dev';
+    
+        })
+    */
+    $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
+      dataService.userSave(userDetails);
+      var userName = dataService.getUser().email;
+      userService.get(userName).then(function (response) {
+        console.log("get ok");
+        $window.location.href = '/#/';
+      },
+        function (error) {
+          console.log("user not found")
+          userService.saveDto(userName).then(function (response) {
+            console.log("get createdDto ok");
+            $window.location.href = '/#/';
+          },
+            function (error) {
+              console.log("create userDto fail");
+            });
+
+          ;
+          // userService.save(userName);
+          //userService       @Path("/createdto/{userName}")
+
+        });
+    });
+
+
 
 
 

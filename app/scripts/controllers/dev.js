@@ -14,6 +14,14 @@
  * fully translate
 
 
+
+http://stackoverflow.com/questions/6660955/google-is-not-defined-when-using-google-maps-v3-in-firefox-remotely
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="/assets/gmap3.js?body=1" type="text/javascript"></script>
+
+
+
  */
 angular.module('frontendApp')
   .controller('DevCtrl', function ($scope, devService, $http, dataService, NgMap) {
