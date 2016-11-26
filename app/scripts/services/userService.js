@@ -17,7 +17,7 @@ angular.module('frontendApp')
                 return $http({
                     method: 'get',
                     //        url: apiService.url + "rest/user/read/" + id
-                    url: "http://my-app-grupog.herokuapp.com/rest/user/read/" + userName
+                    url: "http://my-app-grupog.herokuapp.com/rest/user/readdto/" + userName
 
                     //url: "https://jsonplaceholder.typicode.com/posts?userId=1"
                     //       url: "http://my-app-grupog.herokuapp.com/rest/user/users"

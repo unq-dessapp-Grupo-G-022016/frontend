@@ -3,7 +3,7 @@
 	<div class="jumbotron">
 
 
-
+		<img ng-src={{userImg}} alt="UserImg" /> {{userEmail}}
 
 		<p>This is the user view.</p>
 
@@ -17,9 +17,11 @@
 		<br>
 
 
-		<h3>{{"views.user.Categories" | translate}}</h3>
+		<h3>{{"views.user.Categories" | translate}}: {{categories.length;}}</h3>
 
-		{{categories}}
+		<div ng-repeat="c in categories">
+			{{c}}
+		</div>
 
 
 		<br>
@@ -31,33 +33,30 @@
 
 		<br>
 
-		<h3>{{"views.user.Friends" | translate}}</h3>
+		<h3>{{"views.user.Friends" | translate}}: {{friends.length;}} </h3>
+		<div ng-repeat="f in friends">
+			{{f}}
+		</div>
 
-		{{friends}}
 
-
-		<br>
-
-		<h3>{{"views.user.PersonalEvents" | translate}}</h3>
-
-		{{personalEvents}}
 
 
 		<br>
 
-		<h3>{{"views.user.AttendedEvents" | translate}}</h3>
-
-		{{attendedEvents}}
-
-
-
-		<form novalidate class="form-horizontal">
+		<h3>{{"views.user.PersonalEvents" | translate}} : {{personalEvents.length;}}</h3>
+		<div ng-repeat="pe in personalEvents">
+			{{pe}}
+		</div>
 
 
-			<input ng-model="friend.userName" type="text" class="form-control" placeholder="Friend Name">
+		<br>
 
-		</form>
-		<button type="button" class="btn btn-success btn-block" ng-click="AddFriend()" type="button">AddFriend</button>
+		<h3>{{"views.user.AttendedEvents" | translate}}: {{attendedEvents.length;}}</h3>
+
+		<div ng-repeat="ae in attendedEvents">
+			{{ae}}
+		</div>
+
 
 
 

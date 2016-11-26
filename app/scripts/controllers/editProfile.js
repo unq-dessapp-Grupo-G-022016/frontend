@@ -22,6 +22,7 @@ angular.module('frontendApp')
 
         $scope.friend = "frie";
 
+        $scope.price = "price";
 
 
 
@@ -44,6 +45,31 @@ angular.module('frontendApp')
                     console.log("add category fail");
                 });
         };
+
+
+
+        $scope.setPrice = function () {
+            apiService.setPrice(userEmail, $scope.price)
+                .then(function (response) {
+
+                    var message = '<strong>Well done!</strong> Set price ok.';
+                    var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+
+                    console.log("set price ok");
+                },
+                function (error) {
+
+                    var message = '<strong>Ups!</strong> Set price fail.';
+                    var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+
+                    console.log("set price fail");
+                });
+        };
+
+
+
 
 
         $scope.addFriend = function () {

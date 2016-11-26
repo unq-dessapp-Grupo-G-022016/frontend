@@ -35,7 +35,14 @@ angular.module('frontendApp')
             addUserCategory: function (myUserName, category) {
                 return $http({
                     method: 'get',
-                    url: this.url() + "rest/user/addcategory/" + myUserName + "/" + category
+                    url: this.url() + "rest/user/addCategory/" + myUserName + "/" + category
+                });
+            },
+
+            setPrice: function (myUserName, price) {
+                return $http({
+                    method: 'put',
+                    url: this.url() + "rest/user/updatepricedto/" + myUserName + "/" + price
                 });
             },
 

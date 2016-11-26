@@ -11,77 +11,60 @@ angular.module('frontendApp')
   .controller('UserCtrl', function ($scope, userService, $routeParams, apiService, $rootScope, $window, $location, dataService) {
 
 
-    $scope.AddFriend = function () {
-
-      var myUserName = $rootScope.user.userName;
-      var friendUserName = $scope.friend.userName;
-      apiService.addFriend(myUserName, friendUserName).then(function (response) {
-
-
-        $window.location.href = '/#/user/' + myUserName;
-
-      },
-        function (error) {
-          $window.location.href = '/#/user/' + myUserName;
-
-        });
-
-    };
-
-
-    $scope.userName = dataService.getUser().email;
-
-
-/*
-    var userNameWithoutMail = dataService.getUser().email.slice(0, dataService.getUser().email.indexOf("@"));
-    $scope.userName = userNameWithoutMail;
-*/
-
-    //get,  completar usuario 
-
 
 
     /*
-    http 
+        $scope.AddFriend = function () {
     
-      $http.get("http://validate.jsontest.com/?json=%5BJSON-code-to-validate%5D")
-                      .then(function(response){
-                          $scope.userName =   "(1)" + response.data.object_or_array + "    seconds   " + response.data.parse_time_nanoseconds ;
-                      });
+    
+    
+          var myUserName = $rootScope.user.userName;
+          var friendUserName = $scope.friend.userName;
+          apiService.addFriend(myUserName, friendUserName).then(function (response) {
+    
+    
+            $window.location.href = '/#/user/' + myUserName;
+    
+          },
+            function (error) {
+              $window.location.href = '/#/user/' + myUserName;
+    
+            });
+    
+        };
+    
+    */
+    $scope.userName = dataService.getUser().email;
+    $scope.userImg = dataService.getUser().imageUrl;
+    $scope.userRealName = dataService.getUser().name;
 
 
-      $scope.categories = apiService.url();
-$scope.lowCostTrip = apiService.get();
-      */
+    //console.log(dataService.getUser());
+
+
+    /*
+        var userNameWithoutMail = dataService.getUser().email.slice(0, dataService.getUser().email.indexOf("@"));
+        $scope.userName = userNameWithoutMail;
+    */
 
 
 
-    userService.get($routeParams.id).then(function (response) {
-      //var user = response.data;
 
-      //$scope.userName = user;
-
-
-
-      // $scope.userName = response.data.userName;
-      $scope.categories = response.data.profile.categories;
-      $scope.lowCostTrip = response.data.lowCostTrip.ammount;
-      $scope.friends = response.data.friends;
-      $scope.personalEvents = response.data.personalEvent;
+    userService.getDto($routeParams.id).then(function (response) {
+      console.log(response);
+      $scope.userName = response.data.userName;
+      $scope.categories = response.data.profileCategories;
+      $scope.lowCostTrip = response.data.lowCostTripAmount;
+      $scope.friends = response.data.friendsFriends;
+      $scope.personalEvents = response.data.personalEvents;
       $scope.attendedEvents = response.data.attendedEvents;
 
-
-      //$scope.userName = response.data;
-
-      //$scope.userName = user.username;
-      //$scope.address = user.address;
+      console.log("get userDto OK");
     },
       function (error) {
-
-        //  user.userName = "";
-
-        console.log(error);
+        console.log("get userDto fail");
       });
+
 
   });
 
