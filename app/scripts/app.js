@@ -59,6 +59,11 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+      .when('/editProfile', {
+        templateUrl: 'views/editProfile.html',
+        controller: 'EditProfileCtrl',
+        controllerAs: 'editProfile'
+      })
       .when('/login2', {
         templateUrl: 'views/login2.html',
         //controller: 'LoginCtrl',

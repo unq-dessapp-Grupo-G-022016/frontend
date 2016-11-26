@@ -26,7 +26,16 @@ angular.module('frontendApp')
             addFriend: function (myUserName, friendUsername) {
                 return $http({
                     method: 'put',
-                    url: this.url() + "user/addFriend" + myUserName + friendUsername
+                    url: this.url() + "rest/user/addFriend/" + myUserName + "/" + friendUsername
+                });
+            },
+
+
+            //get!
+            addUserCategory: function (myUserName, category) {
+                return $http({
+                    method: 'get',
+                    url: this.url() + "rest/user/addcategory/" + myUserName + "/" + category
                 });
             },
 

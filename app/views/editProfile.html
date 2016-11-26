@@ -1,0 +1,41 @@
+<div class="container">
+    {{asd}} ||filter mafia trip le recomienda completar el perfil para mejores sugerencias {{category}}
+
+    <flash-message class="zindex"></flash-message>
+
+    <br> {{friend}}
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <form novalidate class="form-horizontal">
+                <input ng-model="category" type="text" class="form-control" placeholder="Category">
+                <br>
+                <div class="form-group ">
+                    <div class="">
+                        <button type="submit" ng-click="addCategory()" class="btn btn-success ">Add Category</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form novalidate class="form-horizontal">
+                <input ng-model="friend" type="text" class="form-control" placeholder="Friend">
+                <br>
+                <div class="form-group ">
+                    <div class="">
+                        <button type="submit" ng-click="addFriend()" class="btn btn-success ">Add Friend</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

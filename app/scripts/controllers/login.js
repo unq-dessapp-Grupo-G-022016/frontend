@@ -70,7 +70,7 @@ angular.module('frontendApp')
           console.log("user not found")
           userService.saveDto(userName).then(function (response) {
             console.log("get createdDto ok");
-            $window.location.href = '/#/';
+            $window.location.href = '/#/editProfile';
           },
             function (error) {
               console.log("create userDto fail");

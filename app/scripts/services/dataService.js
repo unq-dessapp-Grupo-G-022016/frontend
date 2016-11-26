@@ -28,6 +28,10 @@ angular.module('frontendApp')
                 return auth;
             },
 
+            getUserEmail: function(){
+                return auth.email;
+            },
+
             get: function () {
                 return $http({
                     method: 'get',
