@@ -31,6 +31,12 @@ angular.module('frontendApp')
         };
 
 
+        $scope.ViewInfo = function(id){
+            $window.location.href = '/#/event/' + id ;
+        }
+
+
+
         /*
                 bundleService.get().then(function (response) {
                     var jsonBundle = response.data;
