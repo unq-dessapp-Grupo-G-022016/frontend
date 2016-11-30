@@ -5,46 +5,46 @@ angular.module('frontendApp')
 
         var auth = {};
 
-        
 
-        var Product = {
+        var bundle = {};
 
-            name: '',
 
-            price: ''
 
-        };
         return {
 
-            getData: function () {
-                return Product;
-            },
 
             userSave: function (data) {
                 auth = data;
             },
 
-            getUser: function(){
+            getUser: function () {
                 return auth;
             },
 
-            getUserEmail: function(){
+            getUserEmail: function () {
                 return auth.email;
+            },
+
+            saveBundle: function (data) {
+                bundle = data;
+            },
+
+            getBundle: function () {
+                return bundle;
             },
 
             get: function () {
                 return $http({
                     method: 'get',
-                    url: apiService.url + 'event/'
+                    url: apiService.url() + 'event/'
                 });
             },
 
             save: function (newEvent) {
                 return $http({
                     method: 'post',
-                    //url:  'http://localhost:8080/rest/event/create/',
-                    //url: 'http://localhost:9000/rest/event/create/',
-                    url: 'http://my-app-grupog.herokuapp.com/rest/event/create/',
+                    // url: 'http://my-app-grupog.herokuapp.com/rest/event/create/',
+                    url: apiService.url() + 'rest/event/create/',
                     data: newEvent
                 });
             }

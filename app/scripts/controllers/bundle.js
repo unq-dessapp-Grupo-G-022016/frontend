@@ -8,11 +8,11 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-    .controller('BundleCtrl', function ($scope, bundleService, $routeParams, apiService, $window, $location) {
+    .controller('BundleCtrl', function ($scope, dataService, bundleService, $routeParams, apiService, $window, $location) {
 
         $scope.idd = "prev";
 
-        var user = "momo24";
+        var user = dataService.getUserEmail();
 
         $scope.Assist = function (id) {
             $scope.idd = id;
@@ -31,8 +31,8 @@ angular.module('frontendApp')
         };
 
 
-        $scope.ViewInfo = function(id){
-            $window.location.href = '/#/event/' + id ;
+        $scope.ViewInfo = function (id) {
+            $window.location.href = '/#/event/' + id;
         }
 
 

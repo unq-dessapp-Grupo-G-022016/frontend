@@ -6,38 +6,34 @@ angular.module('frontendApp')
             get: function (id) {
                 return $http({
                     method: 'get',
-                    //        url: apiService.url + "rest/user/read/" + id
-                    url: "http://my-app-grupog.herokuapp.com/rest/user/read/" + id
+                    //url: "http://my-app-grupog.herokuapp.com/rest/user/read/" + id
+                    url: apiService.url() + "rest/user/read/" + id
 
                     //url: "https://jsonplaceholder.typicode.com/posts?userId=1"
                     //       url: "http://my-app-grupog.herokuapp.com/rest/user/users"
                 });
             },
-            getDto: function (userName) { 
+            getDto: function (userName) {
                 return $http({
                     method: 'get',
-                    //        url: apiService.url + "rest/user/read/" + id
-                    url: "http://my-app-grupog.herokuapp.com/rest/user/readdto/" + userName
+                    //url: "http://my-app-grupog.herokuapp.com/rest/user/readdto/" + userName
+                    url: apiService.url() + "rest/user/readdto/" + userName
 
-                    //url: "https://jsonplaceholder.typicode.com/posts?userId=1"
-                    //       url: "http://my-app-grupog.herokuapp.com/rest/user/users"
                 });
             },
-            saveDto: function (userName) { 
+            saveDto: function (userName) {
                 return $http({
                     method: 'post',
-                    //        url: apiService.url + "rest/user/read/" + id
-                    url: "http://my-app-grupog.herokuapp.com/rest/user/createdto/" + userName
-
-                    //url: "https://jsonplaceholder.typicode.com/posts?userId=1"
-                    //       url: "http://my-app-grupog.herokuapp.com/rest/user/users"
+                    //url: "http://my-app-grupog.herokuapp.com/rest/user/createdto/" + userName
+                    url: apiService.url() + "rest/user/createdto/" + userName
                 });
             },
 
             save: function (newUser) {
                 return $http({
                     method: 'post',
-                    url: 'http://my-app-grupog.herokuapp.com/rest/user/create',
+                    //url: 'http://my-app-grupog.herokuapp.com/rest/user/create',
+                    url: apiService.url() + 'rest/user/create',
                     data: newUser
                 });
             }

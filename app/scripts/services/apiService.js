@@ -7,6 +7,7 @@ angular.module('frontendApp')
         return {
             url: function () {
                 return "http://my-app-grupog.herokuapp.com/";
+//                return "http://localhost:8080/";
             },
 
             get: function (route) {
@@ -19,7 +20,7 @@ angular.module('frontendApp')
             eventAssist: function (id, user) {
                 return $http({
                     method: 'put',
-                    url: this.url() + id + "/" + user
+                    url: this.url() + "rest/event/attend/" + id + "/" + user
                 });
             },
 

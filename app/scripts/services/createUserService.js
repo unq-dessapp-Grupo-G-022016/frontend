@@ -13,9 +13,8 @@ angular.module('frontendApp')
             save: function (newUser) {
                 return $http({
                     method: 'post',
-                    //url:  'http://localhost:8080/rest/event/create/',
-                    //url: 'http://localhost:9000/rest/event/create/',
-                    url: 'http://my-app-grupog.herokuapp.com/rest/user/create',
+                 //   url: 'http://my-app-grupog.herokuapp.com/rest/user/create',
+                    url: apiService.url() + 'rest/user/create',                 
                     data: newUser
                 });
             }

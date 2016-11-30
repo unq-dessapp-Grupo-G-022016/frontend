@@ -74,7 +74,7 @@ angular
         controller: 'BundleCtrl',
         controllerAs: 'bundle'
       })
-      .when('/event', {
+      .when('/event/:id', {
         templateUrl: 'views/event.html',
         controller: 'EventCtrl',
         controllerAs: 'event'
@@ -102,6 +102,14 @@ angular
         controller: 'CreateUserCtrl',
         controllerAs: 'createUser'
       })
+
+      .
+      when('/botonera', {
+        templateUrl: 'views/botonera.html',
+        controller: 'BotoneraCtrl',
+        controllerAs: 'botonera'
+      })
+
       .
       when('/dev', {
         templateUrl: 'views/dev.html',
