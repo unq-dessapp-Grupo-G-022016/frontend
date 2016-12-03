@@ -7,7 +7,7 @@ angular.module('frontendApp')
         return {
             url: function () {
                 return "http://my-app-grupog.herokuapp.com/";
-//                return "http://localhost:8080/";
+                //                return "http://localhost:8080/";
             },
 
             get: function (route) {
@@ -44,6 +44,54 @@ angular.module('frontendApp')
                 return $http({
                     method: 'put',
                     url: this.url() + "rest/user/updatepricedto/" + myUserName + "/" + price
+                });
+            },
+
+
+            getEventDto: function (id) {
+                return $http({
+                    method: 'get',
+                    url: this.url() + "rest/event/readdto/" + id
+                });
+            },
+
+
+            getEvent: function (id) {
+                return $http({
+                    method: 'get',
+                    url: this.url() + "rest/event/read/" + id
+                });
+            },
+
+
+            //tripManager
+
+            cheap: function (myUserName, date) {
+                return $http({
+                    method: 'get',
+                    url: this.url() + "rest/event/cheap/" + date + "/" + myUserName
+                });
+            },
+
+            friendly: function (myUserName, date) {
+                return $http({
+                    method: 'get',
+                    url: this.url() + "rest/event/friendly/" + date + "/" + myUserName
+                });
+            },
+
+            surprice: function (myUserName, date) {
+                return $http({
+                    method: 'get',
+                    url: this.url() + "rest/event/surprise/" + date + "/" + myUserName
+                });
+            },
+
+
+            personalEvent: function (myUserName, id) {
+                return $http({
+                    method: 'put',
+                    url: this.url() + "rest/user/personalEvent/" + myUserName + "/" + id
                 });
             },
 

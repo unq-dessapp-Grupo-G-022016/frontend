@@ -8,7 +8,158 @@
  * Controller of the frontendApp
  */
 
-angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope) {
+angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope, dataService, apiService, Flash, $window, $location) {
+
+
+  var dateee = "20161203";
+  //picker
+
+  var userEmail = dataService.getUserEmail();
+
+  $scope.cheap = function () {
+    var personalDate = JSON.stringify($scope.myDate);
+    $scope.dtoDate = personalDate.slice(1, 5) + personalDate.slice(6, 8) + personalDate.slice(9, 11);
+
+    apiService.cheap(userEmail, $scope.dtoDate)
+      .then(function (response) {
+
+        dataService.saveBundle(response);
+        $window.location.href = '/#/bundleTrip';
+
+        var message = '<strong>Well done!</strong> add friend ok.';
+        var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+        console.log("cheapTrip ok");
+      },
+      function (error) {
+
+        var message = '<strong>ups!</strong> add friend fail.';
+        var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+        console.log("cheapTrip fail");
+      });
+  };
+
+
+
+  $scope.friends = function () {
+    var personalDate = JSON.stringify($scope.myDate);
+    $scope.dtoDate = personalDate.slice(1, 5) + personalDate.slice(6, 8) + personalDate.slice(9, 11);
+
+    apiService.friendly(userEmail, $scope.dtoDate)
+      .then(function (response) {
+
+        dataService.saveBundle(response);
+        $window.location.href = '/#/bundleTrip';
+
+        var message = '<strong>Well done!</strong> add friend ok.';
+        var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+
+        console.log("friendlyTrip ok");
+      },
+      function (error) {
+
+        var message = '<strong>ups!</strong> add friend fail.';
+        var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+
+        console.log("friendlyTrip fail");
+      });
+  };
+
+
+  $scope.surprice = function () {
+    var personalDate = JSON.stringify($scope.myDate);
+    $scope.dtoDate = personalDate.slice(1, 5) + personalDate.slice(6, 8) + personalDate.slice(9, 11);
+
+    apiService.surprice(userEmail, $scope.dtoDate)
+      .then(function (response) {
+
+        dataService.saveBundle(response);
+        $window.location.href = '/#/bundleTrip';
+
+        var message = '<strong>Well done!</strong> add friend ok.';
+        var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+
+        console.log("surpriceTrip ok");
+      },
+      function (error) {
+
+        var message = '<strong>ups!</strong> add friend fail.';
+        var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+
+
+        console.log("surpriceTrip fail");
+      });
+  };
+
+
+
+  /*
+  
+  
+  
+    $scope.saturdayNightFever = function () {
+      apiService.addFriend(userEmail, $scope.friend)
+        .then(function (response) {
+  
+          var message = '<strong>Well done!</strong> add friend ok.';
+          var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+  
+  
+          console.log("add friend ok");
+        },
+        function (error) {
+  
+          var message = '<strong>ups!</strong> add friend fail.';
+          var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+  
+  
+          console.log("add friend fail");
+        });
+    };
+  
+  
+  
+  
+  
+  
+  
+    $scope.couple = function () {
+      apiService.addFriend(userEmail, $scope.friend)
+        .then(function (response) {
+  
+          var message = '<strong>Well done!</strong> add friend ok.';
+          var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+  
+  
+          console.log("add friend ok");
+        },
+        function (error) {
+  
+          var message = '<strong>ups!</strong> add friend fail.';
+          var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+  
+  
+          console.log("add friend fail");
+        });
+    };
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  */
+
+
+
+
 
 
 
@@ -37,6 +188,9 @@ angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope) 
   $scope.dateTime = new Date();
   $scope.minDate = moment().subtract(1, 'month');
   $scope.maxDate = moment().add(1, 'month');
+
+
+
 
 
 

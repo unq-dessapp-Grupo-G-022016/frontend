@@ -1,103 +1,70 @@
 <div class="container">
 
-{{test}}
-	<div class="spanBottomLine">
-		<p>This is the event view.</p>
+	{{test}}
+
+
+	<br><br><br><br><br><br>
+
+	<div class="panel-body">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-4">
+					<p> From : {{e.startTime.slice(0,10)}} | {{e.startTime.slice(11,19)}} </p>
+
+					<p> To : {{e.endTime.slice(0,10)}} | {{e.endTime.slice(11,19)}} </p>
+
+				</div>
+				<div class="col-md-6">
+					<p> {{"views.bundle.Address" | translate}} : {{e.address}} </p>
+					<p>{{"views.bundle.Information" | translate}} : {{e.details}} </p>
+				</div>
+				<div class="col-md-2">
+
+
+					<p> {{"views.bundle.Price" | translate}} : $ {{e.price.ammount}} </p>
+
+
+					<!--					<p> Category: {{e.profile.categories[0].name}}
+					</p> -->
+
+					<p> {{"views.user.Categories" | translate}}: {{edto.categories.length;}} </p>
+
+					<p>
+						<div ng-repeat="c in edto.categories">
+							<h4> {{c}}</h4>
+						</div>
+					</p>
+
+					<p> {{"views.user.Attenders" | translate}}: {{edto.attenders.length;}} </p>
+
+					<p>
+						<div ng-repeat="a in edto.attenders">
+							<h4> {{a}}</h4>
+						</div>
+					</p>
+
+
+					<!--
+										<p> Category:{{ (typeof e.profile.categories[0].name === 'undefined' || e.profile.categories[0].name === null) ? 'available' : 'oh no, you don't have it' }} </p>
+
+										<p> Category:{{ isExists(e.profile.categories[0].name) ? "it's true" : "it's false"}} </p>
+-->
+				</div>
+			</div>
+			<!--
+			<button type="button" class="btn btn-success btn-block" ng-click="ViewInfo(e.id)" type="button">View info</button>
+-->
+		</div>
+	</div>
+
+	<div>
+		<ng-map zoom="11" center="{{map.address}}" style="width:600px; height:400px">
+			<marker position="{{map.address}}" title="{{address}}"></marker>
+			<marker position="Brampton Canada" title="Brampton Canada"></marker>
+		</ng-map>
+		<br/>Address : <input ng-model="map.address" />
 	</div>
 
 
-	<div class="spanBottomLine">
+	<br><br><br><br><br><br>
 
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">Single Event Name</h3>
-			</div>
-			<div class="panel-body">
-				<div class="jumbotron">
-					<div class="row">
-						<div class="col-md-4">
-							<p> StartTime : 20:15 </p>
-							<p> EndTime: 22:00</p>
-						</div>
-						<div class="col-md-6">
-							<p> Address: qwdqdqwdq 2334 </p>
-							<p> info : adasdsa qwe qew ds da ds d asd a sd a</p>
-						</div>
-						<div class="col-md-2">
-							<p> price :2</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div class="spanBottomLine">
-
-		<h2>bundle</h2>
-
-
-		<div class="row">
-			<div class="col-md-3">
-
-				<h4>StarTime 19:00</h4>
-
-			</div>
-			<div class="col-md-3">
-
-				<h4>EndTime 21:99</h4>
-
-			</div>
-
-		</div>
-
-
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">First Event Name</h3>
-			</div>
-			<div class="panel-body">
-				<div class="jumbotron">
-					<div class="row">
-						<div class="col-md-4">
-							<p> StartTime : 20:15 </p>
-							<p> EndTime: 22:00</p>
-						</div>
-						<div class="col-md-6">
-							<p> Address: qwdqdqwdq 2334 </p>
-							<p> info : adasdsa qwe qew ds da ds d asd a sd a</p>
-						</div>
-						<div class="col-md-2">
-							<p> price :2</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">Second Event Name</h3>
-			</div>
-			<div class="panel-body">
-				<div class="jumbotron">
-					<div class="row">
-						<div class="col-md-4">
-							<p> StartTime : 20:15 </p>
-							<p> EndTime: 22:00</p>
-						</div>
-						<div class="col-md-6">
-							<p> Address: qwdqdqwdq 2334 </p>
-							<p> info : adasdsa qwe qew ds da ds d asd a sd a</p>
-						</div>
-						<div class="col-md-2">
-							<p> price :2</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>

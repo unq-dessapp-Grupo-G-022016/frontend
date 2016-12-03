@@ -1,0 +1,87 @@
+
+<!--
+
+{{asd}}
+
+<br>
+<br> {{idd}}
+
+<br>
+<br> {{bundle}}
+-->
+
+<div class="gifDanceFixed">
+    <div class="container whiteBackground noTrans">
+
+
+
+
+
+
+        <ul>
+            <li dir-paginate="b in bundle | itemsPerPage: pageSize" current-page="currentPage">
+                <div class="spanBottomLine">
+
+                    <h2> Bundle: {{ $index + 1}} </h2>
+                    <div ng-repeat="e in b">
+
+                        <h3>Event {{$index + 1 + pageSize * (currentPage - 1) }} </h3>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">{{e.name}}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="jumbotron">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p> From : {{e.startTime.slice(0,10)}} | {{e.startTime.slice(11,19)}} </p>
+
+                                            <p> To : {{e.endTime.slice(0,10)}} | {{e.endTime.slice(11,19)}} </p>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p> {{"views.bundle.Address" | translate}} : {{e.address}} </p>
+                                            <p>{{"views.bundle.Information" | translate}} : {{e.details}} </p>
+                                        </div>
+                                        <div class="col-md-2">
+
+
+                                            <p> {{"views.bundle.Price" | translate}} : $ {{e.price.ammount}} </p>
+
+
+                                            <p> Category:{{e.profile.categories[0].name}} </p>
+                                            <!--
+										<p> Category:{{ (typeof e.profile.categories[0].name === 'undefined' || e.profile.categories[0].name === null) ? 'available' : 'oh no, you don't have it' }} </p>
+
+										<p> Category:{{ isExists(e.profile.categories[0].name) ? "it's true" : "it's false"}} </p>
+-->
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-success btn-block" ng-click="ViewInfo(e.id)" type="button">View info</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!--closeBund -->
+
+                    <button type="button" class="btn btn-success btn-block" ng-click="Assist($index)" type="button">Assist</button>
+
+                </div>
+            </li>
+        </ul>
+
+
+
+
+
+
+        <dir-pagination-controls></dir-pagination-controls>
+
+    </div>
+</div>

@@ -74,6 +74,12 @@ angular
         controller: 'BundleCtrl',
         controllerAs: 'bundle'
       })
+      .when('/bundleTrip', {
+        templateUrl: 'views/bundleTrip.html',
+        controller: 'BundleTripCtrl',
+        controllerAs: 'bundleTrip'
+      })
+
       .when('/event/:id', {
         templateUrl: 'views/event.html',
         controller: 'EventCtrl',

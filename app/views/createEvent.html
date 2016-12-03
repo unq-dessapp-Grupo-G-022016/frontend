@@ -1,14 +1,12 @@
 <div class="container">
 
 
- {{time}} {{myDate}}
+    {{time}} {{myDate}} slice {{myDate.slice(3,6)}}
 
-slice {{myDate.slice(3,6)}}
-
-
+{{evvv}}
     <div class="well ">
 
-{{qqq}}
+        {{qqq}}
 
         <h1 class="text-center">Create Event</h1>
         <form novalidate class="form-horizontal">
@@ -18,6 +16,7 @@ slice {{myDate.slice(3,6)}}
             <input ng-model="newEvent.address" type="text" class="form-control" placeholder="Address">
             <input ng-model="newEvent.name" type="text" class="form-control" placeholder="Name">
             <input ng-model="newEvent.price.ammount" type="text" class="form-control" placeholder="Price">
+            <input ng-model="cat" type="text" class="form-control" placeholder="Category">
 
             <input ng-model="newEvent.attenders.maxCapacity" type="text" class="form-control" placeholder="MaxCapacity">
             <input ng-model="newEvent.attenders.recommendedMinGroup" type="text" class="form-control" placeholder="RecommendedMinGroup">
@@ -48,11 +47,8 @@ slice {{myDate.slice(3,6)}}
                 </div>
             </div>
 
-{{preDateF}}
-<br>
-{{postDatef}}
-
-            {{event}}
+            {{preDateF}}
+            <br> {{postDatef}} {{event}}
             <div class="form-group">
                 <div class="">
                     <button type="submit" ng-click="show(newEvent)" class="btn btn-lg btn-success">Show</button>
