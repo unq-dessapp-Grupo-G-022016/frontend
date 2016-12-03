@@ -91,7 +91,7 @@ angular.module('frontendApp')
             personalEvent: function (myUserName, id) {
                 return $http({
                     method: 'put',
-                    url: this.url() + "rest/user/personalEvent/" + myUserName + "/" + id
+                    url: this.url() + "rest/event/personal/" + id + "/" + myUserName
                 });
             },
 

@@ -68,19 +68,19 @@ angular.module('frontendApp')
                 console.log(response);
 
 
-                /*
-                                apiService.personalEvent(dataService.getUserEmail(), response.data)
-                                    .then(function (response) {
-                
-                                        console.log("personalEvent OK");
-                
-                                    },
-                                    function (error) {
-                                        // $scope.notif = ok;
-                                        console.log("personalEvent Fail");
-                                    });
-                
-                */
+
+                apiService.personalEvent(dataService.getUserEmail(), response.data)
+                    .then(function (response) {
+
+                        console.log("personalEvent OK");
+
+                    },
+                    function (error) {
+                        // $scope.notif = ok;
+                        console.log("personalEvent Fail");
+                    });
+
+
 
             },
                 function (error) {
