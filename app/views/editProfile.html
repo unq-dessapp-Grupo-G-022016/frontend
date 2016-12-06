@@ -1,22 +1,24 @@
 <div class="container">
-    {{asd}} ||filter mafia trip le recomienda completar el perfil para mejores sugerencias {{category}}
+
+
+    <div class="text-center">
+        <h3>
+            {{"views.editProfile.suggest" | translate}}
+        </h3>
+    </div>
 
     <flash-message class="zindex"></flash-message>
 
-    <br> {{friend}}
+    <br><br>
 
-    <br>
 
-    <br>
-    <br>
-    <br>
 
     <form novalidate class="form-horizontal">
         <input ng-model="price" type="text" class="form-control" placeholder="Price">
         <br>
         <div class="form-group ">
-            <div class="">
-                <button type="submit" ng-click="setPrice()" class="btn btn-success ">Set Price</button>
+            <div class="text-center">
+                <button type="submit" ng-click="setPrice()" class="btn btn-success ">{{"views.editProfile.setPrice" | translate}}</button>
             </div>
         </div>
     </form>
@@ -29,8 +31,8 @@
                 <input ng-model="category" type="text" class="form-control" placeholder="Category">
                 <br>
                 <div class="form-group ">
-                    <div class="">
-                        <button type="submit" ng-click="addCategory()" class="btn btn-success ">Add Category</button>
+                    <div class="text-center">
+                        <button type="submit" ng-click="addCategory()" class="btn btn-success ">{{"views.editProfile.addCategory" | translate}}</button>
                     </div>
                 </div>
             </form>
@@ -40,8 +42,8 @@
                 <input ng-model="friend" type="text" class="form-control" placeholder="Friend">
                 <br>
                 <div class="form-group ">
-                    <div class="">
-                        <button type="submit" ng-click="addFriend()" class="btn btn-success ">Add Friend</button>
+                    <div class="text-center">
+                        <button type="submit" ng-click="addFriend()" class="btn btn-success ">{{"views.editProfile.addFriend" | translate}}</button>
                     </div>
                 </div>
             </form>

@@ -1,66 +1,75 @@
-<div class="container">
+<div class="gifHotDog">
+    <div class="container whiteBackground">
+        <div class="well ">
+            <flash-message class="zindex"></flash-message>
+            <h1 class="text-center">{{"views.createEvent.createEvent" | translate}}</h1>
+            <form novalidate class="form-horizontal">
+                <div class="row">
+                    <div class="col-md-6">
+                        {{"views.createEvent.name" | translate}}
 
+                        
 
-    {{time}} {{myDate}} slice {{myDate.slice(3,6)}}
-
-{{evvv}}
-    <div class="well ">
-
-        {{qqq}}
-
-        <h1 class="text-center">Create Event</h1>
-        <form novalidate class="form-horizontal">
-
-
-
-            <input ng-model="newEvent.address" type="text" class="form-control" placeholder="Address">
-            <input ng-model="newEvent.name" type="text" class="form-control" placeholder="Name">
-            <input ng-model="newEvent.price.ammount" type="text" class="form-control" placeholder="Price">
-            <input ng-model="cat" type="text" class="form-control" placeholder="Category">
-
-            <input ng-model="newEvent.attenders.maxCapacity" type="text" class="form-control" placeholder="MaxCapacity">
-            <input ng-model="newEvent.attenders.recommendedMinGroup" type="text" class="form-control" placeholder="RecommendedMinGroup">
-            <input ng-model="newEvent.attenders.recommendedMaxGroup" type="text" class="form-control" placeholder="RecommendedMaxGroup">
-
-            <input ng-model="newEvent.details" type="text" class="form-control" placeholder="Details">
-
-            <br>
-
-            <div ng-cloak>
-                <div layout-gt-xs="row">
-                    <div flex-gt-xs>
-                        <h4>{{"views.tripSelection.ChooseADay" | translate}}</h4>
-                        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                        <input ng-model="newEvent.name" type="text" class="form-control" placeholder="Name">
+                        <br> {{"views.createEvent.address" | translate}}
+                        <input ng-model="newEvent.address" type="text" class="form-control" placeholder="Address">
+                        <br>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        {{"views.createEvent.category" | translate}}
+                        <input ng-model="cat" type="text" class="form-control" placeholder="Category">
+                        <br> {{"views.createEvent.price" | translate}}
+                        <input ng-model="newEvent.price.ammount" type="text" class="form-control" placeholder="Price">
+                        <br>
                     </div>
                 </div>
-            </div>
 
-
-            <input mdc-datetime-picker="" date="false" time="true" type="text" id="time2" placeholder="Time" min-date="minDate" format="HH:mm"
-                ng-model="time" class=" md-input">
-
-
-            <div class="form-group jumbotron">
-                <div class="">
-                    <button type="submit" ng-click="save(newEvent)" class="btn btn-success btn-block">Create</button>
-
+                <br> {{"views.createEvent.imageLink" | translate}}
+                <input ng-model="newEvent.imageUrl" type="text" class="form-control" placeholder="Image Link">
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <br> {{"views.createEvent.maxCapacity" | translate}}
+                        <input ng-model="newEvent.attenders.maxCapacity" type="text" class="form-control" placeholder="MaxCapacity">
+                    </div>
+                    <div class="col-md-4">
+                        <br> {{"views.createEvent.recommendedMinGroup" | translate}}
+                        <input ng-model="newEvent.attenders.recommendedMinGroup" type="text" class="form-control" placeholder="RecommendedMinGroup">
+                    </div>
+                    <div class="col-md-4">
+                        <br> {{"views.createEvent.recommendedMaxGroup" | translate}}
+                        <input ng-model="newEvent.attenders.recommendedMaxGroup" type="text" class="form-control" placeholder="RecommendedMaxGroup">
+                    </div>
                 </div>
-            </div>
-
-            {{preDateF}}
-            <br> {{postDatef}} {{event}}
-            <div class="form-group">
-                <div class="">
-                    <button type="submit" ng-click="show(newEvent)" class="btn btn-lg btn-success">Show</button>
-
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{"views.createEvent.details" | translate}}
+                        <input ng-model="newEvent.details" type="text" class="form-control" placeholder="Details">
+                    </div>
                 </div>
-            </div>
-
-
-        </form>
+                <br>
+                <div class="text-center">
+                    <div ng-cloak>
+                        <div layout-gt-xs="row">
+                            <div flex-gt-xs>
+                                <h4>{{"views.tripSelection.ChooseADay" | translate}}</h4>
+                                <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                            </div>
+                        </div>
+                    </div>
+                    <input mdc-datetime-picker="" date="false" time="true" type="text" id="time2" placeholder="Time" min-date="minDate" format="HH:mm"
+                        ng-model="time" class=" md-input">
+                </div>
+                <div class="form-group text-center ">
+                    <br>
+                    <div class="row">
+                        <button type="submit" ng-click="save(newEvent)" class="btn btn-lg btn-success ">{{"views.createEvent.create" | translate}}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-
-
-
-
 </div>

@@ -39,11 +39,25 @@ angular
   })
   .config(function ($routeProvider) {
     $routeProvider
+      /*
+        .when('/', {
+          templateUrl: 'views/main.html',
+          controller: 'MainCtrl',
+          controllerAs: 'main'
+        })
+  */
       .when('/', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
+      .when('/home', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+
+
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
@@ -65,13 +79,6 @@ angular
         controllerAs: 'editProfile'
       })
 
-      /*
-            .when('/login2', {
-              templateUrl: 'views/login2.html',
-              //controller: 'LoginCtrl',
-              //controllerAs: 'login'
-            })
-      */
 
       .when('/bundle', {
         templateUrl: 'views/bundle.html',
@@ -149,42 +156,6 @@ angular
       return moment(date).format(format);
     };
   })
-
-
-
-
-
-  /*
-    .config(function (authProvider) {
-  
-      // routing configuration and other stuff
-      // ...
-  
-      authProvider.init({
-        domain: 'leog91.auth0.com',
-        clientID: 'Mo2QtJnd5jzZ1NVldzRiUOlwSGmkdEM4',
-        loginUrl: '/login'
-      });
-    })
-    .run(function (auth) {
-      auth.hookEvents();
-    })
-  */
-
-
-
-
-
-  /*
-    //angular-google-plus auth 
-    .config(['GooglePlusProvider', function (GooglePlusProvider) {
-      GooglePlusProvider.init({
-        clientId: '938236716494-52clc04blo96trmo3l3lktrv6qi82eiv.apps.googleusercontent.com',
-        apiKey: 'AIzaSyCcC89qple1Ln_O5LC82_pTVR3C9mFXihs'
-      });
-    }])
-  
-  */
 
 
 

@@ -26,15 +26,15 @@ angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope, 
         dataService.saveBundle(response);
         $window.location.href = '/#/bundleTrip';
 
-        var message = '<strong>Well done!</strong> add friend ok.';
-        var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+        var message = '<strong>Well done!</strong> Cheap Trip found.';
+        Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
         console.log("cheapTrip ok");
       },
       function (error) {
 
-        var message = '<strong>ups!</strong> add friend fail.';
-        var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+        var message = '<strong>ups!</strong> Cheap Trip fail, try later.';
+        Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
         console.log("cheapTrip fail");
       });
@@ -52,16 +52,16 @@ angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope, 
         dataService.saveBundle(response);
         $window.location.href = '/#/bundleTrip';
 
-        var message = '<strong>Well done!</strong> add friend ok.';
-        var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+        var message = '<strong>Well done!</strong> Friendly Trip fround.';
+        Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
         console.log("friendlyTrip ok");
       },
       function (error) {
 
-        var message = '<strong>ups!</strong> add friend fail.';
-        var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+        var message = '<strong>ups!</strong> Friendly trip fail, try later.';
+        Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
         console.log("friendlyTrip fail");
@@ -79,16 +79,16 @@ angular.module('frontendApp').controller('TripSelectionCtrl', function ($scope, 
         dataService.saveBundle(response);
         $window.location.href = '/#/bundleTrip';
 
-        var message = '<strong>Well done!</strong> add friend ok.';
-        var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+        var message = '<strong>Well done!</strong> Surprice Trip found.';
+        Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
         console.log("surpriceTrip ok");
       },
       function (error) {
 
-        var message = '<strong>ups!</strong> add friend fail.';
-        var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
+        var message = '<strong>ups!</strong> Surprice trip fail, try later.';
+        Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
         console.log("surpriceTrip fail");

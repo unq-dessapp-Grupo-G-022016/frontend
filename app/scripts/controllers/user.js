@@ -12,42 +12,9 @@ angular.module('frontendApp')
 
 
 
-
-    /*
-        $scope.AddFriend = function () {
-    
-    
-    
-          var myUserName = $rootScope.user.userName;
-          var friendUserName = $scope.friend.userName;
-          apiService.addFriend(myUserName, friendUserName).then(function (response) {
-    
-    
-            $window.location.href = '/#/user/' + myUserName;
-    
-          },
-            function (error) {
-              $window.location.href = '/#/user/' + myUserName;
-    
-            });
-    
-        };
-    
-    */
     $scope.userName = dataService.getUser().email;
     $scope.userImg = dataService.getUser().imageUrl;
     $scope.userRealName = dataService.getUser().name;
-
-
-    //console.log(dataService.getUser());
-
-
-    /*
-        var userNameWithoutMail = dataService.getUser().email.slice(0, dataService.getUser().email.indexOf("@"));
-        $scope.userName = userNameWithoutMail;
-    */
-
-
 
 
     userService.getDto($routeParams.id).then(function (response) {

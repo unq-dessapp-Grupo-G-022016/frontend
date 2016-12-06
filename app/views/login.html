@@ -1,120 +1,26 @@
-<div class="container">
+<div class="gifLines">
 
-  <!--
-{{userr}}
-{{www}}
--->
+  <div class="container">
 
 
-  <!--
-  <div>
+    <br><br><br><br><br>
 
-    <form novalidate class="form-horizontal">
+    <button class="btn  btn-block" g-login type="button">Google Login</button>
+
+    <br>
+    <br>
+    <br>
+
+    <button class="btn  btn-block" ng-click="logout()" type="button">Logout</button> {{profile}} {{$root.currentUser}} {{googleUser}}
 
 
-      <input ng-model="userr.userName" type="text" class="form-control" placeholder="userName">
 
-    </form>
-    <button type="button" class="btn btn-success btn-block" ng-click="Logging()" type="button">Loging</button>
-
+    <br> <br>
+    <br><br><br><br> <br>
+    <br> <br>
+    
+    
 
 
   </div>
-
--->
-
-
-
-  {{$rootScope.usuario}} {{qqq}}
-
-
-
-
-
-
-  <br><br><br><br><br>
-
-
-
-  <!--
-<input type="submit"  ng-click="auth.signin()" />
--->
-
-  <button class="btn  btn-block" g-login type="button">Google Login</button>
-
-
-  <!--
-  <button class="btn  btn-block" fb-login type="button">facebook Login</button>
-  -->
-  <br>
-
-  <button class="btn  btn-block" ng-click="logout()" type="button">logout</button> {{profile}} {{$root.currentUser}} {{googleUser}}
-  {{bbb}}
-
-  <!--
-<a href="" ng-click="signin()" />
--->
-
-  <!--
-<span>{{profile.name}} {{profile.email}}</span>
-<html lang="en">
-<head>
-  <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="938236716494-52clc04blo96trmo3l3lktrv6qi82eiv.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-</head>
-<body><br>
-  <div class="container gifDance jumbotron">
-    <br>
-    <br>
-    <br>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <br><br><br><br>
-    <a href="#/" onclick="signOut();">Sign out</a>
-  </div>
-  {{aaa}} {{profile}}
-  <script>
-      function signOut() {
-          var auth2 = gapi.auth2.getAuthInstance();
-          auth2.signOut().then(function () {
-            console.log('User signed out.');
-          });
-        }
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      };
-    </script>
-</body>
-</html>
-<div class="gifDance">
-	<div class="container">
-		<div class="jumbotron">
-			{{aaa}}
-<br>
-<br>
-<br>
-<input type="submit" ng-controller="LoginCtrl" ng-click="auth.signin()" />
-			<a class="btn btn-block btn-social btn-google btn-primary">
-				<span class="fa fa-google"></span> Sign in with Google
-			</a>
-			<a class="btn btn-block btn-social btn-twitter btn-primary">
-				<span class="fa fa-twitter"></span> Sign in with Twitter
-			</a>
-			<a class="btn btn-block btn-social btn-facebook btn-primary">
-				<span class="fa fa-facebook"></span> Sign in with Facebook
-			</a>
-		</div>
-	</div>
-</div>
--->
 </div>

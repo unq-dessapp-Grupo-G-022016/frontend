@@ -1,58 +1,38 @@
-<div class="container">
-	<!--	<br> {{myDate}}
+<div class="">
 
-	<br>
-{{time}}
-	<br> {{date}}
+	<div class="container">
 
--->
+		<div class="well well-lg">
+			<flash-message class="zindex"></flash-message>
 
-	{{dtoDate}}
-	<div class="well well-lg">
 
-		<br>
+			<div class="row">
+				<div class="col-md-6">
+					<button type="button" ng-click="cheap()" class="btn btn-primary btn-block">{{"views.tripSelection.Cheap" | translate}}</button>
+					<button type="button" ng-click="friends()" class="btn btn-primary btn-block">{{"views.tripSelection.Friends" | translate}}</button>
+					<button type="button" ng-click="saturdayNightFever()" class="btn btn-primary btn-block">{{"views.tripSelection.SaturdayNightFever" | translate}}</button>
+					<button type="button" ng-click="couple()" class="btn btn-primary btn-block">{{"views.tripSelection.Couple" | translate}}</button>
+					<button type="button" ng-click="surprice()" class="btn btn-primary btn-block">{{"views.tripSelection.Surprice" | translate}}</button>
+				</div>
+				<div class="col-md-6 center-block">
 
-		<div class="row">
-			<div class="col-md-6">
-				<button type="button" ng-click="cheap()" class="btn btn-primary btn-block">{{"views.tripSelection.Cheap" | translate}}</button>
-				<button type="button" ng-click="friends()" class="btn btn-primary btn-block">{{"views.tripSelection.Friends" | translate}}</button>
-				<button type="button" ng-click="saturdayNightFever()" class="btn btn-primary btn-block">{{"views.tripSelection.SaturdayNightFever" | translate}}</button>
-				<button type="button" ng-click="couple()" class="btn btn-primary btn-block">{{"views.tripSelection.Couple" | translate}}</button>
-				<button type="button" ng-click="surprice()" class="btn btn-primary btn-block">{{"views.tripSelection.Surprice" | translate}}</button>
-			</div>
-			<div class="col-md-6 center-block">
-				<div ng-cloak>
-					<div layout-gt-xs="row">
-						<div flex-gt-xs>
-							<h4>{{"views.tripSelection.ChooseADay" | translate}}</h4>
-							<md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+					<div class="text-center">
+						<div ng-cloak>
+							<div layout-gt-xs="row">
+								<div flex-gt-xs>
+									<h4>{{"views.tripSelection.ChooseADay" | translate}}</h4>
+									<br>
+									<md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<br>
+
 		</div>
-
-		<br>
-
-		<!--<div class="container">
-			<input mdc-datetime-picker="" date="true" time="true" type="text" id="datetime" placeholder="Date" min-date="date" ng-model="dateTime"
-				class=" md-input">
-		</div>
--->
-
-
-		<!--
-clock
-		<input mdc-datetime-picker="" date="false" time="true" type="text" id="time2" placeholder="Time" min-date="minDate" format="HH:mm"
-			ng-model="time" class=" md-input">
-
--->
-
-
-
-
-
 
 	</div>
-
 </div>

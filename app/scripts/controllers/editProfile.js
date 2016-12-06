@@ -18,11 +18,11 @@ angular.module('frontendApp')
         var userEmail = dataService.getUserEmail();
 
 
-        $scope.category = "categ";
+        $scope.category = "";
 
-        $scope.friend = "frie";
+        $scope.friend = "";
 
-        $scope.price = "price";
+        $scope.price = "";
 
 
 
@@ -30,7 +30,7 @@ angular.module('frontendApp')
             apiService.addUserCategory(userEmail, $scope.category)
                 .then(function (response) {
 
-                    var message = '<strong>Well done!</strong> add category ok.';
+                    var message = '<strong>Well done!</strong> Add category success !.';
                     var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
@@ -38,7 +38,7 @@ angular.module('frontendApp')
                 },
                 function (error) {
 
-                    var message = '<strong>Ups!</strong> add category fail.';
+                    var message = '<strong>Ups!</strong> Add category fail, Try again.';
                     var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
@@ -52,7 +52,7 @@ angular.module('frontendApp')
             apiService.setPrice(userEmail, $scope.price)
                 .then(function (response) {
 
-                    var message = '<strong>Well done!</strong> Set price ok.';
+                    var message = '<strong>Well done!</strong> Set price success.';
                     var id = Flash.create('success', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 
@@ -60,7 +60,7 @@ angular.module('frontendApp')
                 },
                 function (error) {
 
-                    var message = '<strong>Ups!</strong> Set price fail.';
+                    var message = '<strong>Ups!</strong> Set price fail. Try again';
                     var id = Flash.create('danger', message, 4000, { class: 'custom-class', id: 'custom-id' }, true);
 
 

@@ -32,14 +32,6 @@ angular.module('frontendApp')
 
 
 
-        /*   then(function(response){
-     $scope.content = response.data;
-     }, function(response){
-     $scope.content = "error";
-}
-);*/
-
-
         this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',

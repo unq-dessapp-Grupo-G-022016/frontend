@@ -40,6 +40,49 @@
 }
 */
 
+
+
+.gifBarOldMan
+{
+  background-image: url('https://media.giphy.com/media/xTiTnfLG02nulbibT2/giphy.gif');
+
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+
+.gifLines
+{
+  background-image: url('https://media.giphy.com/media/3oGRFrD8HqAUe5CXIc/giphy.gif');
+background-size: cover;
+}
+
+.gifBar
+{
+  background-image: url('http://farm6.static.flickr.com/5029/5658551241_8852d44b38_o.gif');
+background-size: cover;
+}
+
+
+.gifHotDog
+{
+  background-image: url('http://kevinburg.com/tumblr/fm2ugifs/hot-dog-615.gif');
+background-size: cover;
+}
+
+
+
+.gifMetro
+{
+  background-image: url('http://kevinburg.com/tumblr/fm2ugifs/train-repeat-615.gif');
+background-size: cover;
+}
+
+
 .gifDance{
   background-image: url('https://66.media.tumblr.com/2758c4f4d76d1f0e7f9828d3b9ead6d1/tumblr_n06rgy0bMg1tp2wglo1_500.gif');
 background-size: cover;

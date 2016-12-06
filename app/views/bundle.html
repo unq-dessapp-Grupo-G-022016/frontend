@@ -1,96 +1,6 @@
 <div class="gifDanceFixed">
 	<div class="container whiteBackground noTrans">
 
-
-		<!--
-
-		{{idd}}
--->
-
-
-		<!--   
-	<h1>try</h1>
-
-	<div ng-repeat="e in bundle">
-
-		<div class="spanBottomLine">
-			<h2>{{"views.bundle.Bundle" | translate}} {{$index}} </h2>
-			<div class="row">
-				<div class="col-md-3">
-					<h4>{{"views.bundle.StartTime" | translate}} {{e.id + ":00"}}</h4>
-				</div>
-				<div class="col-md-3">
-					<h4>{{"views.bundle.EndTime" | translate}} {{e.id + 3+ ":00"}}</h4>
-				</div>
-			</div>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title">{{eventName}}</h3>
-				</div>
-				<div class="panel-body">
-					<div class="jumbotron">
-						<div class="row">
-							<div class="col-md-4">
-								<p> {{"views.bundle.StartTime" | translate}} {{e.id+ ":00"}} </p>
-								<p> {{"views.bundle.EndTime" | translate}} {{e.id+1+ ":00"}} </p>
-							</div>
-							<div class="col-md-6">
-								<p> {{"views.bundle.Address" | translate}} {{e.title}} </p>
-								<p>{{"views.bundle.Information" | translate}} {{e.body}} </p>
-							</div>
-							<div class="col-md-2">
-								<p> {{"views.bundle.Price" | translate}} : {{e.userId}} </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
--->
-		<!--
-		<br><br><br><br>
-		<h1> prod </h1>
-		<br><br><br><br>
-
-
-		<div ng-repeat="e in bundle">
-
-			<div class="spanBottomLine">
-				<h3>Event {{$index}} </h3>
-		
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title">{{e.name}}</h3>
-					</div>
-					<div class="panel-body">
-						<div class="jumbotron">
-							<div class="row">
-								<div class="col-md-4">
-									<p> From : {{e.startTime.slice(0,10)}} | {{e.startTime.slice(11,19)}} </p>
-
-									<p> To : {{e.endTime.slice(0,10)}} | {{e.endTime.slice(11,19)}} </p>
-
-
-								</div>
-								<div class="col-md-6">
-									<p> Address : {{e.address}} </p>
-									<p>Info : {{e.details}} </p>
-								</div>
-								<div class="col-md-2">
-									<p> Price : {{e.price.ammount}} </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
--->
-
-
-
 		<ul>
 			<li dir-paginate="e in bundle | itemsPerPage: pageSize" current-page="currentPage">
 				<div class="spanBottomLine">
@@ -104,22 +14,22 @@
 							<div class="jumbotron">
 								<div class="row">
 									<div class="col-md-4">
-										<p> From : {{e.startTime.slice(0,10)}} | {{e.startTime.slice(11,19)}} </p>
+										<p> From: {{e.startTime.slice(0,10)}} | {{e.startTime.slice(11,19)}} </p>
 
-										<p> To : {{e.endTime.slice(0,10)}} | {{e.endTime.slice(11,19)}} </p>
+										<p> To: {{e.endTime.slice(0,10)}} | {{e.endTime.slice(11,19)}} </p>
 
 									</div>
 									<div class="col-md-6">
-										<p> {{"views.bundle.Address" | translate}} : {{e.address}} </p>
-										<p>{{"views.bundle.Information" | translate}} : {{e.details}} </p>
+										<p> {{"views.bundle.Address" | translate}}: {{e.address}} </p>
+										<p>{{"views.bundle.Information" | translate}}: {{e.details}} </p>
 									</div>
 									<div class="col-md-2">
 
 
-										<p> {{"views.bundle.Price" | translate}} : $ {{e.price.ammount}} </p>
+										<p> {{"views.bundle.Price" | translate}}: $ {{e.price.ammount}} </p>
 
 
-										<p> Category:{{e.profile.categories[0].name}} </p>
+										<p> Category: {{e.profile.categories[0].name}} </p>
 										<!--
 										<p> Category:{{ (typeof e.profile.categories[0].name === 'undefined' || e.profile.categories[0].name === null) ? 'available' : 'oh no, you don't have it' }} </p>
 
