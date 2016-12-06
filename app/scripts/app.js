@@ -24,8 +24,8 @@ angular
     'ngMap',
     'angularUtils.directives.dirPagination',
     'socialLogin',
-    'ngFlash',
-    'auth0'
+    //'auth0',
+    'ngFlash'
   ])
   .constant('DEBUG_MODE', /*DEBUG_MODE*/true/*DEBUG_MODE*/)
   .constant('VERSION_TAG', /*VERSION_TAG_START*/new Date().getTime()/*VERSION_TAG_END*/)
@@ -64,11 +64,15 @@ angular
         controller: 'EditProfileCtrl',
         controllerAs: 'editProfile'
       })
-      .when('/login2', {
-        templateUrl: 'views/login2.html',
-        //controller: 'LoginCtrl',
-        //controllerAs: 'login'
-      })
+
+      /*
+            .when('/login2', {
+              templateUrl: 'views/login2.html',
+              //controller: 'LoginCtrl',
+              //controllerAs: 'login'
+            })
+      */
+
       .when('/bundle', {
         templateUrl: 'views/bundle.html',
         controller: 'BundleCtrl',

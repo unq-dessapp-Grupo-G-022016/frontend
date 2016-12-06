@@ -6,6 +6,11 @@
 	<br><br><br><br><br><br>
 
 	<div class="panel-body">
+
+		<img ng-src={{e.imageUrl}} class="img-responsive center-block img-rounded" alt="eventImg" />
+
+
+
 		<div class="jumbotron">
 			<div class="row">
 				<div class="col-md-4">
@@ -57,14 +62,15 @@
 		</div>
 	</div>
 
-	<div>
-		<ng-map zoom="11" center="{{map.address}}" style="width:600px; height:400px">
-			<marker position="{{map.address}}" title="{{address}}"></marker>
-			<marker position="Brampton Canada" title="Brampton Canada"></marker>
-		</ng-map>
-		<br/>Address : <input ng-model="map.address" />
+	<div class="row">
+
+		<div class="center-block">
+			<ng-map zoom="11" center="{{map.address}}" style="width:600px; height:400px">
+				<marker position="{{map.address}}" title="{{address}}"></marker>
+				<marker position="Brampton Canada" title="Brampton Canada"></marker>
+			</ng-map>
+			<br/>Address : <input ng-model="map.address" />
+		</div>
+
 	</div>
-
-
 	<br><br><br><br><br><br>
-
